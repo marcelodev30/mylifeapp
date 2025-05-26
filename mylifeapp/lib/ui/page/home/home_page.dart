@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var idex=0;
+  var idex = 0;
   final _pages = [
     Center(child: Text('Página Início')),
     Center(child: Text('Página Treinos ')),
@@ -21,20 +21,32 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: MyAppBar(),
       body: _pages[idex],
-        bottomNavigationBar: 
-        SalomonBottomBar(
-          margin: EdgeInsets.symmetric(vertical: 30,horizontal: 20),
-          currentIndex: idex,
-          onTap:(i){
-            setState(() {
-              idex = i;
-            });
-          },
-          items: [
-            SalomonBottomBarItem(icon: Icon(Icons.home), title: Text('Home'),selectedColor: Colors.white),
-            SalomonBottomBarItem(icon: Icon(Icons.fitness_center), title: Text('Treinos'),selectedColor: Colors.white),
-            SalomonBottomBarItem(icon: Icon(Icons.people), title: Text('Profile'),selectedColor: Colors.white),
-            ]),
+      bottomNavigationBar: SalomonBottomBar(
+        margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+        currentIndex: idex,
+        onTap: (i) {
+          setState(() {
+            idex = i;
+          });
+        },
+        items: [
+          SalomonBottomBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+            selectedColor: Colors.white,
+          ),
+          SalomonBottomBarItem(
+            icon: Icon(Icons.fitness_center),
+            title: Text('Treinos'),
+            selectedColor: Colors.white,
+          ),
+          SalomonBottomBarItem(
+            icon: Icon(Icons.people),
+            title: Text('Profile'),
+            selectedColor: Colors.white,
+          ),
+        ],
+      ),
     );
   }
 }

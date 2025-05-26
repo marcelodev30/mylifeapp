@@ -12,13 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return LayoutBaseLogin(
-      body: Form(
-        child: Column(
-          children: [
-            TextFormField(),
-            TextFormField(),
-          ],
-        ),
-      ));
+      body: Form(child: Column(children: [TextFormField(), TextFormField()])),
+    );
   }
 }
