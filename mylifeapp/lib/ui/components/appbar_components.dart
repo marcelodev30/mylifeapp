@@ -8,7 +8,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({super.key});
 
   @override
-  Size get preferredSize => const Size.fromHeight(125);
+  Size get preferredSize => const Size.fromHeight(160);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ],
                 ),
               ),
-              Image.asset(ConstantsApp.iconexplosion),
+              //Image.asset(ConstantsApp.iconexplosion),
             ],
           ),
         ),
