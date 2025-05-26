@@ -15,5 +15,11 @@ class AppTextStyles{
     height: 1.2,
     color: AppColors.white
   ); 
+
+   static TextStyle get appTitle32  => TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white
+  ); 
   
 }
