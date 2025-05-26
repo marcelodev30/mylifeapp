@@ -22,4 +22,10 @@ class AppTextStyles{
     color: AppColors.white
   ); 
   
+  static TextStyle get text40BoldLetterSpacing1 => TextStyle(
+    fontSize: 40,
+    fontWeight: FontWeight.bold,
+    color: Colors.white, // base para o shader
+    letterSpacing: 1.2,
+  );
 }
