@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'My Life App',
       theme: AppThemeData.dark,
-      home: LoginPage(),
+      home: HomePage(),
     );
   }
 }
