@@ -27,4 +27,11 @@ class AppTextStyles {
     color: Colors.white, // base para o shader
     letterSpacing: 1.2,
   );
+
+  static TextStyle get text16W700Subindo => TextStyle(
+    decoration: TextDecoration.underline,
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: Colors.black,
+  );
 }
