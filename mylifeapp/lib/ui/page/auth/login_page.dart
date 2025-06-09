@@ -55,7 +55,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ],
             ),
-
             Row(
               spacing: 5,
               children: [

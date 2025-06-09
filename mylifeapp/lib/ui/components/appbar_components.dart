@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/colors_config.dart';
-import 'package:mylifeapp/core/config/constants_config.dart';
-
+import '../../core/config/image_config.dart';
 import '../../core/config/textstyles_config.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -32,7 +31,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
                 child: CircleAvatar(
                   radius: 28,
-                  backgroundImage: AssetImage(ConstantsApp.imgPerfil),
+                  backgroundImage: AssetImage(AppImages.imgPerfil),
                 ),
               ),
               SizedBox(width: 12),

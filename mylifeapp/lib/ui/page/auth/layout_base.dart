@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/colors_config.dart';
-import 'package:mylifeapp/core/config/constants_config.dart' show ConstantsApp;
 import 'package:mylifeapp/core/config/textstyles_config.dart';
+import '../../../core/config/image_config.dart';
 
 class LayoutBaseLogin extends StatelessWidget {
   const LayoutBaseLogin({super.key, required this.body});
@@ -19,7 +19,7 @@ class LayoutBaseLogin extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 16 * 5),
-                Image.asset(ConstantsApp.imgLogoV1, width: 270, height: 270),
+                Image.asset(AppImages.imgLogoV1, width: 270, height: 270),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
