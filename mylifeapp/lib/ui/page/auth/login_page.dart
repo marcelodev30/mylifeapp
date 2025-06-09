@@ -5,6 +5,7 @@ import 'package:mylifeapp/ui/page/auth/components/appbutton.dart'
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 
 import '../../../core/config/textstyles_config.dart';
+import 'components/texttitle_components.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -21,10 +22,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           spacing: 23,
           children: [
-            Text(
-              'Login',
-              style: AppTextStyles.appTitle32.copyWith(color: Colors.black),
-            ),
+            TextTitleAuth(title: 'Login'),
             TextFormField(
               decoration: InputDecoration(
                 label: Text("Email"),
