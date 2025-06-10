@@ -6,6 +6,7 @@ class AppColors {
   static Color get green => Colors.green;
   static Color get gray => Colors.grey;
   static Color get blue => Colors.blue;
+  static Color get red => Colors.red;
   static Color get deepNavy => Color(0xFF0A0F1C);
   static Color get neonRed => Color(0xFFFF2A6D);
   static Color get neonCyan => Color(0xFF00E5FF);

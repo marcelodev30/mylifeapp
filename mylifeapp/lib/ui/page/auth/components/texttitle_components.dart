@@ -8,10 +8,13 @@ class TextTitleAuth extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(title,style: TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.bold,
-    color: AppColors.white,
-  ));
+    return Text(
+      title,
+      style: TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+        color: AppColors.black,
+      ),
+    );
   }
 }

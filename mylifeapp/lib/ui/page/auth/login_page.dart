@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/config/colors_config.dart';
-import 'package:mylifeapp/ui/page/auth/components/appbutton.dart'
-    show AppButtonAuth;
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
-
+import '../../../core/config/colors_config.dart';
+import '../../../core/config/constants_config.dart';
 import '../../../core/config/textstyles_config.dart';
+import 'components/appbutton.dart';
+import 'components/textform_components.dart';
 import 'components/texttitle_components.dart';
 
 class LoginPage extends StatefulWidget {
@@ -15,15 +15,18 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final _fromKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return LayoutBaseLogin(
       body: Form(
+        key: _fromKey,
         child: Column(
-          spacing: 23,
+          spacing: AppConstants.spacingColumn,
           children: [
             TextTitleAuth(title: 'Login'),
             TextFormField(
+              style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 label: Text("Email"),
                 prefixIcon: Icon(Icons.email),
@@ -31,13 +34,8 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Column(
               children: [
-                TextFormField(
-                  decoration: InputDecoration(
-                    label: Text('Senha'),
-                    prefixIcon: Icon(Icons.password_outlined),
-                    suffixIcon: Icon(Icons.visibility),
-                  ),
-                ),
+                TextFormSenha(onSaved: (value) {}),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +56,11 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 AppButtonAuth(
                   title: 'Entra',
-                  onPressed: () {},
+                  onPressed: () {
+                    if (_fromKey.currentState!.validate()) {
+                      _fromKey.currentState!.save();
+                    }
+                  },
                   color: AppColors.blue,
                 ),
                 AppButtonAuth(
