@@ -35,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
             Column(
               children: [
                 TextFormSenha(onSaved: (value) {}),
-
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,

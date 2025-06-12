@@ -4,7 +4,13 @@ import '../../core/config/image_config.dart';
 import '../../core/config/textstyles_config.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({super.key});
+  final String name;
+  final String frase;
+  const MyAppBar({
+    super.key,
+    required this.name,
+    this.frase = 'Bora conferir o treino de hoje?',
+  });
 
   @override
   Size get preferredSize => const Size.fromHeight(160);
@@ -40,14 +46,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'E aí, Marcelo Alves! ',
-                      style: AppTextStyles.appBarTitle18,
-                    ),
-                    Text(
-                      'Bora conferir o treino de hoje?',
-                      style: AppTextStyles.appBarSubtitle20,
-                    ),
+                    Text('E aí, $name! ', style: AppTextStyles.appBarTitle18),
+                    Text(frase, style: AppTextStyles.appBarSubtitle20),
                   ],
                 ),
               ),

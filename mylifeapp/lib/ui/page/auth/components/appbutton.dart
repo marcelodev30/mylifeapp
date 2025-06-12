@@ -15,11 +15,14 @@ class AppButtonAuth extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 150,
+      width: 140,
       height: 42,
       child: TextButton(
         onPressed: onPressed,
-        style: ButtonStyle(backgroundColor: WidgetStatePropertyAll(color)),
+        style: ButtonStyle(
+          elevation: WidgetStatePropertyAll(4),
+          backgroundColor: WidgetStatePropertyAll(color),
+        ),
         child: Text(
           title,
           style: TextStyle(

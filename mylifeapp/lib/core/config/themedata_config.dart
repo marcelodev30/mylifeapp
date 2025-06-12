@@ -51,7 +51,7 @@ class AppThemeData {
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppConstants.borderRadius),
         borderSide: BorderSide(
-          color: AppColors.red,
+          color: Colors.redAccent,
           width: AppConstants.borderSideWidth,
         ),
       ),
