@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
-import '../../../core/config/colors_config.dart';
+import '../../../core/theme/colors_config.dart';
 import '../../../core/config/constants_config.dart';
-import '../../../core/config/textstyles_config.dart';
+import '../../../core/theme/textstyles_config.dart';
 import 'components/appbutton.dart';
 import 'components/textform_components.dart';
 import 'components/texttitle_components.dart';

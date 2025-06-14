@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/config/colors_config.dart';
+import 'package:mylifeapp/core/theme/colors_config.dart';
 
 class AppTextStyles {
   static TextStyle get appBarTitle18 => TextStyle(

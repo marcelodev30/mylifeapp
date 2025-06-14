@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/config/colors_config.dart';
+import '../../../../core/theme/colors_config.dart';
 
 class TextTitleAuth extends StatelessWidget {
   final String title;

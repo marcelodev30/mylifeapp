@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/config/colors_config.dart';
-import '../../core/config/image_config.dart';
-import '../../core/config/textstyles_config.dart';
+import 'package:mylifeapp/core/theme/colors_config.dart';
+import '../../core/theme/image_config.dart';
+import '../../core/theme/textstyles_config.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String name;

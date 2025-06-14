@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/gorouter_config.dart';
-import 'package:mylifeapp/core/config/themedata_config.dart';
+import 'package:mylifeapp/core/theme/themedata_config.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
