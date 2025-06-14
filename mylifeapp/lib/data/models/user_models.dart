@@ -5,4 +5,8 @@ class UserModels {
   String? photoURL;
 
   UserModels({required this.email, this.uid, this.name, this.photoURL});
+
+  Map<String, dynamic> toJson() {
+    return {'email': email, 'name': name, 'photoURL': photoURL};
+  }
 }

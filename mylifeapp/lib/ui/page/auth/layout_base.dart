@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/theme/colors_config.dart';
+import 'package:mylifeapp/core/config/constants/colors_config.dart';
 import 'package:mylifeapp/core/theme/textstyles_config.dart';
-import '../../../core/theme/image_config.dart';
+import '../../../core/config/constants/image_config.dart';
 
 class LayoutBaseLogin extends StatelessWidget {
   const LayoutBaseLogin({super.key, required this.body});

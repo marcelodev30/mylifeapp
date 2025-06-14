@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/config/constants_config.dart';
+import 'package:mylifeapp/core/config/constants/constants_config.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 
 import 'components/texttitle_components.dart';

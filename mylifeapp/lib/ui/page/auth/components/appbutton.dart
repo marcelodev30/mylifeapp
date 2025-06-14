@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/theme/colors_config.dart';
+import 'package:mylifeapp/core/config/constants/colors_config.dart';
 
 class AppButtonAuth extends StatelessWidget {
   final String title;
