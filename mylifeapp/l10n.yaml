@@ -1,0 +1,8 @@
+# informa ao Flutter que os arquivos .arb estão em 'lib/core/l10n'
+arb-dir: lib/core/l10n 
+
+# define o arquivo que servirá de modelo para as traduções
+template-arb-file: app_pt.arb 
+
+# define o nome do arquivo de saída que será gerado em lib/generated/
+output-localization-file: app_localizations.dart

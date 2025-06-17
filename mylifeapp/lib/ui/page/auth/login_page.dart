@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 import '../../../core/config/constants/colors_config.dart';
 import '../../../core/config/constants/constants_config.dart';
@@ -24,11 +25,11 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           spacing: AppConstants.spacingColumn,
           children: [
-            TextTitleAuth(title: 'Login'),
+            TextTitleAuth(title: AppLocalizations.of(context)!.loginTitle),
             TextFormField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
-                label: Text("Email"),
+                label: Text(AppLocalizations.of(context)!.signUpEmailLabel),
                 prefixIcon: Icon(Icons.email),
               ),
             ),
@@ -42,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextButton(
                       onPressed: () {},
                       child: Text(
-                        "Redefir Senha",
+                        AppLocalizations.of(context)!.forgotPasswordTitle,
                         style: AppTextStyles.text16W700Subindo,
                       ),
                     ),
@@ -54,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
               spacing: 5,
               children: [
                 AppButtonAuth(
-                  title: 'Entra',
+                  title: AppLocalizations.of(context)!.loginButton,
                   onPressed: () {
                     if (_fromKey.currentState!.validate()) {
                       _fromKey.currentState!.save();
