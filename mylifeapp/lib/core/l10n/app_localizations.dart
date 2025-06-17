@@ -385,6 +385,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Falha na autenticação. Por favor, verifique sua conexão e tente novamente.'**
   String get authErrorGeneric;
+
+  /// No description provided for @hellouser.
+  ///
+  /// In pt, this message translates to:
+  /// **'E aí, {userName}'**
+  String hellouser(String userName);
 }
 
 class _AppLocalizationsDelegate

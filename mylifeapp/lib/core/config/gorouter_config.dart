@@ -7,7 +7,7 @@ class AppRouter {
   static final navigatorKey = GlobalKey<NavigatorState>();
   static final GoRouter route = GoRouter(
     navigatorKey: navigatorKey,
-    initialLocation: '/login',
+    initialLocation: '/',
     routes: [
       GoRoute(
         path: '/login',

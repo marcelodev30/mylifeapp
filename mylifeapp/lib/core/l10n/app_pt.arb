@@ -47,5 +47,14 @@
   "authErrorInvalidCredential": "Credenciais inválidas. Verifique seu e-mail e senha.",
   "authErrorEmailAlreadyInUse": "Este endereço de e-mail já está em uso por outra conta.",
   "authErrorWeakPassword": "A senha é muito fraca. Tente uma combinação mais forte.",
-  "authErrorGeneric": "Falha na autenticação. Por favor, verifique sua conexão e tente novamente."
+  "authErrorGeneric": "Falha na autenticação. Por favor, verifique sua conexão e tente novamente.",
+  "hellouser": "E aí, {userName}",
+  "@hellouser": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "user"
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import '../../core/config/constants/image_config.dart';
 import '../../core/theme/textstyles_config.dart';
 
@@ -46,7 +47,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('E aí, $name! ', style: AppTextStyles.appBarTitle18),
+                    Text(
+                      AppLocalizations.of(context)!.hellouser(name),
+                      style: AppTextStyles.appBarTitle18,
+                    ),
                     Text(frase, style: AppTextStyles.appBarSubtitle20),
                   ],
                 ),

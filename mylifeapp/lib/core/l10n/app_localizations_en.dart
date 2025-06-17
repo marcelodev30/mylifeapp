@@ -159,4 +159,9 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get authErrorGeneric =>
       'Authentication failed. Please check your connection and try again.';
+
+  @override
+  String hellouser(String userName) {
+    return 'Hello $userName';
+  }
 }

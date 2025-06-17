@@ -47,5 +47,14 @@
   "authErrorInvalidCredential": "Invalid credentials. Please check your email and password.",
   "authErrorEmailAlreadyInUse": "This email address is already in use by another account.",
   "authErrorWeakPassword": "The password is too weak. Please try a stronger combination.",
-  "authErrorGeneric": "Authentication failed. Please check your connection and try again."
+  "authErrorGeneric": "Authentication failed. Please check your connection and try again.",
+  "hellouser": "Hello {userName}",
+  "@hellouser": {
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "user"
+      }
+    }
+  }
 }
