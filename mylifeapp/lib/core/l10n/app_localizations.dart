@@ -161,7 +161,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginCreateAccountButton.
   ///
   /// In pt, this message translates to:
-  /// **'Cadastre-se aqui'**
+  /// **'Cadastre-se'**
   String get loginCreateAccountButton;
 
   /// No description provided for @signUpTitle.

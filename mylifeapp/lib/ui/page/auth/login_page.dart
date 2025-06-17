@@ -23,12 +23,13 @@ class _LoginPageState extends State<LoginPage> {
       body: Form(
         key: _fromKey,
         child: Column(
-          spacing: AppConstants.spacingColumn,
+          spacing: AppConstants.spacingColumnAuth,
           children: [
             TextTitleAuth(title: AppLocalizations.of(context)!.loginTitle),
             TextFormField(
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
+                hintText: AppLocalizations.of(context)!.loginEmailHint,
                 label: Text(AppLocalizations.of(context)!.signUpEmailLabel),
                 prefixIcon: Icon(Icons.email),
               ),
@@ -64,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                   color: AppColors.blue,
                 ),
                 AppButtonAuth(
-                  title: 'Cadastrar',
+                  title: AppLocalizations.of(context)!.loginCreateAccountButton,
                   onPressed: () {},
                   color: AppColors.black,
                 ),

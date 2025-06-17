@@ -39,7 +39,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get loginNoAccountPrompt => 'Não tem uma conta?';
 
   @override
-  String get loginCreateAccountButton => 'Cadastre-se aqui';
+  String get loginCreateAccountButton => 'Cadastre-se';
 
   @override
   String get signUpTitle => 'Criar Conta';

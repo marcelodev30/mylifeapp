@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/validators_config.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 
 class TextFormSenha extends StatefulWidget {
   final void Function(String?)? onSaved;
   final String? Function(String?)? validator;
-  const TextFormSenha({super.key, required this.onSaved, this.validator});
+  final String? labelText;
+  final String? hintText;
+  const TextFormSenha({
+    super.key,
+    required this.onSaved,
+    this.validator,
+    this.labelText,
+    this.hintText,
+  });
 
   @override
   State<TextFormSenha> createState() => _TextFormSenhaState();
@@ -20,7 +29,11 @@ class _TextFormSenhaState extends State<TextFormSenha> {
       onSaved: widget.onSaved,
       style: TextStyle(color: Colors.black87, fontSize: 16),
       decoration: InputDecoration(
-        label: Text('Senha'),
+        labelText:
+            widget.labelText ??
+            AppLocalizations.of(context)!.loginPasswordLabel,
+        hintText:
+            widget.hintText ?? AppLocalizations.of(context)!.loginPasswordHint,
         prefixIcon: Icon(Icons.password_outlined),
         suffixIcon: IconButton(
           onPressed: () => setState(() => obscureText = !obscureText),

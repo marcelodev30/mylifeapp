@@ -27,6 +27,12 @@ class AppThemeData {
         fontSize: 16,
         fontWeight: FontWeight.w600,
       ),
+      hintStyle: TextStyle(
+        color: AppColors.black,
+        fontSize: 14,
+        fontWeight: FontWeight.w600,
+      ),
+
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppConstants.borderRadius),
         borderSide: BorderSide(

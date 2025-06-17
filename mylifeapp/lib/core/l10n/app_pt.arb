@@ -1,6 +1,5 @@
 {
   "@@locale": "pt",
-
   "loginTitle": "Entrar",
   "loginSubtitle": "Bem-vindo de volta! Sentimos sua falta.",
   "loginEmailLabel": "E-mail",
@@ -11,8 +10,7 @@
   "loginButton": "Entrar",
   "loginOrConnectWith": "Ou conecte-se com",
   "loginNoAccountPrompt": "Não tem uma conta?",
-  "loginCreateAccountButton": "Cadastre-se aqui",
-
+  "loginCreateAccountButton": "Cadastre-se",
   "signUpTitle": "Criar Conta",
   "signUpSubtitle": "É rápido, fácil e gratuito.",
   "signUpFullNameLabel": "Nome Completo",
@@ -28,11 +26,9 @@
   "signUpButton": "Criar minha conta",
   "signUpAlreadyHaveAccountPrompt": "Já tem uma conta?",
   "signUpLoginButton": "Faça o login",
-
   "forgotPasswordTitle": "Recuperar Senha",
   "forgotPasswordSubtitle": "Insira seu e-mail e enviaremos um link para redefinir sua senha.",
   "forgotPasswordSendButton": "Enviar Link de Recuperação",
-
   "genericLoading": "Carregando...",
   "genericErrorTitle": "Ocorreu um Erro",
   "genericSuccessTitle": "Sucesso!",
@@ -42,12 +38,10 @@
   "genericSave": "Salvar",
   "genericNext": "Próximo",
   "genericBack": "Voltar",
-
   "validationEmailInvalid": "Por favor, insira um e-mail válido.",
   "validationPasswordShort": "A senha deve ter pelo menos 8 caracteres.",
   "validationPasswordsDoNotMatch": "As senhas não coincidem.",
   "validationFieldRequired": "Este campo é obrigatório.",
-
   "authErrorUserNotFound": "Nenhum usuário foi encontrado com este e-mail.",
   "authErrorWrongPassword": "Senha incorreta. Por favor, tente novamente.",
   "authErrorInvalidCredential": "Credenciais inválidas. Verifique seu e-mail e senha.",
