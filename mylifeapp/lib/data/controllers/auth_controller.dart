@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mylifeapp/core/interfaces/userauth_interfaces.dart';
+import 'package:mylifeapp/core/interfaces/auth_repository_interface.dart';
 import 'package:mylifeapp/data/models/user_models.dart';
 
 import '../../core/exceptions/auth_exeption.dart';
 
 class AuthController extends ChangeNotifier {
-  final UserAuthInterface _authRepository;
+  final AuthRepository _authRepository;
   // ignore: unused_field
   UserModels? _userModels;
   bool _isLoading = false;

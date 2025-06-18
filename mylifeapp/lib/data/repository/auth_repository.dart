@@ -1,12 +1,14 @@
 import 'package:mylifeapp/core/exceptions/auth_exeption.dart';
-import 'package:mylifeapp/core/interfaces/userauth_interfaces.dart';
+import 'package:mylifeapp/core/interfaces/auth_repository_interface.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/data/models/user_models.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class AuthRepository implements UserAuthInterface {
+class AuthRepositoryFirebase implements AuthRepository {
   final FirebaseAuth _firebaseAuth;
+  final AppLocalizations _appString;
 
-  AuthRepository(this._firebaseAuth);
+  AuthRepositoryFirebase(this._firebaseAuth, this._appString);
 
   @override
   Future<UserModels> login(String email, String senha) async {
@@ -17,26 +19,22 @@ class AuthRepository implements UserAuthInterface {
       );
 
       if (user.user == null) {
-        throw ErroInesperadoAuthException(
-          message: 'Falha ao obter dados do usuário após o login.',
-        );
+        throw AuthException(_appString.authErrorGeneric);
       }
       return UserModels(email: email, uid: user.user!.uid);
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case 'user-not-found':
-          throw UsuarioNaoEncontradoException();
+          throw AuthException(_appString.authErrorUserNotFound);
         case 'wrong-password':
-          throw SenhaIncorretaException();
+          throw AuthException(_appString.authErrorWrongPassword);
         case 'invalid-credential':
-          throw LoginInvalidoException();
+          throw AuthException(_appString.authErrorInvalidCredential);
         default:
-          throw ErroInesperadoAuthException(
-            message: 'Erro do Firebase: ${e.code}',
-          );
+          throw AuthException(_appString.authErrorGeneric);
       }
     } catch (e) {
-      throw ErroInesperadoAuthException();
+      throw AuthException(_appString.authErrorGeneric);
     }
   }
 
@@ -56,16 +54,14 @@ class AuthRepository implements UserAuthInterface {
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case 'weak-password':
-          throw SenhaFracaException();
+          throw AuthException(_appString.authErrorWeakPassword);
         case 'email-already-in-use':
-          throw EmailJaEmUsoException();
+          throw AuthException(_appString.authErrorEmailAlreadyInUse);
         default:
-          throw ErroInesperadoAuthException(
-            message: 'Erro do Firebase: ${e.code}',
-          );
+          throw AuthException(_appString.authErrorGeneric);
       }
     } catch (e) {
-      throw ErroInesperadoAuthException();
+      throw AuthException(_appString.authErrorGeneric);
     }
   }
 }
