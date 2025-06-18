@@ -6,11 +6,11 @@ import '../../core/theme/textstyles_config.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String name;
-  final String frase;
+  final String phrase;
   const MyAppBar({
     super.key,
     required this.name,
-    this.frase = 'Bora conferir o treino de hoje?',
+    this.phrase = 'Bora conferir o treino de hoje?',
   });
 
   @override
@@ -51,7 +51,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                       AppLocalizations.of(context)!.hellouser(name),
                       style: AppTextStyles.appBarTitle18,
                     ),
-                    Text(frase, style: AppTextStyles.appBarSubtitle20),
+                    Text(phrase, style: AppTextStyles.appBarSubtitle20),
                   ],
                 ),
               ),

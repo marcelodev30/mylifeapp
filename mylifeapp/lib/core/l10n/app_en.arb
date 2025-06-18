@@ -56,5 +56,14 @@
         "example": "user"
       }
     }
+  },
+  "phraseAppBar": "Let's check out today's {phrase}?",
+  "@phraseAppBar": {
+    "placeholders": {
+      "phrase": {
+        "type": "String",
+        "example": "training"
+      }
+    }
   }
 }

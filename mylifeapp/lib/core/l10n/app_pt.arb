@@ -56,5 +56,14 @@
         "example": "user"
       }
     }
+  },
+  "phraseAppBar": "Bora conferir o {phrase} de hoje?",
+  "@phraseAppBar": {
+    "placeholders": {
+      "phrase": {
+        "type": "String",
+        "example": "treino"
+      }
+    }
   }
 }
