@@ -47,3 +47,8 @@ app.*.map.json
 # Arquivos de configuração do FlutterFire CLI
 firebase_options.dart
 firebase.json
+
+android/app/google-services.json
+ios/firebase_app_id_file.json
+ios/Runner/GoogleServices-Info.plist
+lib/firebase_options.dart
