@@ -1,3 +1,4 @@
+import 'package:mylifeapp/data/models/models%20genericos/definicao_models.dart';
 import 'package:mylifeapp/data/models/models%20genericos/tipo_models.dart';
 
 class AppLists {
@@ -59,6 +60,43 @@ class AppLists {
       nomeTecnico: "Falha Voluntária",
       descricao: "Decide parar antes de qualquer falha real.",
       quandoUsar: "Controle mental, estratégia de recuperação.",
+    ),
+  ];
+  static List<DefinicaoModel> definicoesDeExecucao = [
+    DefinicaoModel(
+      nome: 'Explosivo',
+      descricao: 'Movimento rápido tanto na descida quanto na subida.',
+      objetivo: 'Melhorar potência e velocidade.',
+    ),
+    DefinicaoModel(
+      nome: 'Explosivo Controlado',
+      descricao: 'Descida controlada e subida explosiva.',
+      objetivo: 'Força e controle neuromuscular.',
+    ),
+    DefinicaoModel(
+      nome: 'Lento Controlado',
+      descricao: 'Execução lenta com pausas em cada fase.',
+      objetivo: 'Aumentar tempo sob tensão e controle muscular.',
+    ),
+    DefinicaoModel(
+      nome: 'Isométrico',
+      descricao: 'Pausa no meio da repetição para foco em estabilidade.',
+      objetivo: 'Fortalecer pontos fracos e controle.',
+    ),
+    DefinicaoModel(
+      nome: 'Superlento',
+      descricao: 'Execução extremamente lenta sem pausas.',
+      objetivo: 'Máximo tempo sob tensão para hipertrofia.',
+    ),
+    DefinicaoModel(
+      nome: 'Com pausa no pico',
+      descricao: 'Pausa no topo da contração.',
+      objetivo: 'Maior ativação muscular e controle no pico.',
+    ),
+    DefinicaoModel(
+      nome: 'Drop Tempo',
+      descricao: 'Ritmo constante até a falha muscular.',
+      objetivo: 'Exaustão e estímulo metabólico.',
     ),
   ];
 }

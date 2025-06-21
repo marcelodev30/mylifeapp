@@ -6,7 +6,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthRepositoryFirebase implements AuthRepository {
   final FirebaseAuth _firebaseAuth;
-  //final AppLocalizations _appString;
 
   AuthRepositoryFirebase(this._firebaseAuth);
 
@@ -19,22 +18,22 @@ class AuthRepositoryFirebase implements AuthRepository {
       );
 
       if (user.user == null) {
-        throw AuthException('_appString.authErrorGeneric');
+        throw AuthException('authErrorGeneric');
       }
       return AuthModels(email: email, uid: user.user!.uid);
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case 'user-not-found':
-          throw AuthException('_appString.authErrorUserNotFound');
+          throw AuthException('authErrorUserNotFound');
         case 'wrong-password':
-          throw AuthException('_appString.authErrorWrongPassword');
+          throw AuthException('authErrorWrongPassword');
         case 'invalid-credential':
-          throw AuthException('_appString.authErrorInvalidCredential');
+          throw AuthException('authErrorInvalidCredential');
         default:
-          throw AuthException('_appString.authErrorGeneric');
+          throw AuthException('authErrorGeneric');
       }
     } catch (e) {
-      throw AuthException('_appString.authErrorGeneric');
+      throw AuthException('authErrorGeneric');
     }
   }
 
@@ -54,14 +53,14 @@ class AuthRepositoryFirebase implements AuthRepository {
     } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case 'weak-password':
-          throw AuthException('_appString.authErrorWeakPassword');
+          throw AuthException('authErrorWeakPassword');
         case 'email-already-in-use':
-          throw AuthException('_appString.authErrorEmailAlreadyInUse');
+          throw AuthException('authErrorEmailAlreadyInUse');
         default:
-          throw AuthException('_appString.authErrorGeneric');
+          throw AuthException('authErrorGeneric');
       }
     } catch (e) {
-      throw AuthException('_appString.authErrorGeneric');
+      throw AuthException('authErrorGeneric');
     }
   }
 

@@ -1,17 +1,18 @@
 import 'package:uuid/uuid.dart';
 
-class SerieModel {
+class SerieTreinoModel {
   final String id;
   final int serie;
   final int reps;
   final double carga;
-  final DateTime createdAt;
+  String? velocidadeExecucao;
   String? tipoSerie;
   String? controle;
+  double? intervaloseries;
   bool falha;
   int? ajuda;
 
-  SerieModel({
+  SerieTreinoModel({
     required this.reps,
     required this.serie,
     required this.carga,
@@ -19,14 +20,16 @@ class SerieModel {
     this.ajuda = 0,
     this.tipoSerie,
     this.controle,
-  }) : id = Uuid().v4(),
-       createdAt = DateTime.now();
+    this.velocidadeExecucao,
+    this.intervaloseries,
+  }) : id = Uuid().v4();
 
-  factory SerieModel.fromJson(Map<String, dynamic> map) {
-    return SerieModel(
+  factory SerieTreinoModel.fromJson(Map<String, dynamic> map) {
+    return SerieTreinoModel(
       serie: map['serie'] as int,
       tipoSerie: map['tipoSerie'] as String?,
       controle: map['controle'] as String?,
+      velocidadeExecucao: map['velocidadeExecucao'] as String?,
       reps: map['reps'] as int,
       carga: (map['carga'] as num).toDouble(),
       falha: map['falha'] as bool,
@@ -43,10 +46,11 @@ class SerieModel {
       'carga': carga,
       'falha': falha,
       'ajuda': ajuda,
+      'velocidadeExecucao': velocidadeExecucao,
     };
   }
 
   @override
   String toString() =>
-      'id: $id, serie: $serie, tipoSerie: $tipoSerie, reps: $reps, carga: $carga, falha: $falha';
+      'id: $id, Serie: $serie, Tipo de Serie: $tipoSerie, Reps: $reps, Carga: $carga, Falha: $falha, Velocidade de Execucao: $velocidadeExecucao';
 }
