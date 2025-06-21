@@ -1,4 +1,4 @@
-import 'package:mylifeapp/data/models/treino_models/tipo_models.dart';
+import 'package:mylifeapp/data/models/models%20genericos/tipo_models.dart';
 
 class AppLists {
   static List<TipoModel> tipoDeSerie = [
