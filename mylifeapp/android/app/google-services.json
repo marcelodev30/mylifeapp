@@ -12,7 +12,12 @@
           "package_name": "com.marcelodev30.app.mylifeapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "602262260697-c3us48qefnkv01qhu555phcrcovsc5tb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCdLlltLYLjOziGC3mqp7xJrWknAsG_h5g"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602262260697-c3us48qefnkv01qhu555phcrcovsc5tb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "602262260697-7q1en8dm3c93suak1i2aqgdu5v20f6k4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.marcelodev30.app.mylifeapp"
+              }
+            }
+          ]
         }
       }
     }

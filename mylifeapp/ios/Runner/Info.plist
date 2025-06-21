@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Mylifeapp</string>
+	<string>MyLifeApp</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -45,5 +45,21 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Use sua biometria para acessar o aplicativo de forma rápida e segura.</string>
+	<key>GIDClientID</key>
+	<string>602262260697-7q1en8dm3c93suak1i2aqgdu5v20f6k4.apps.googleusercontent.com</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.602262260697-7q1en8dm3c93suak1i2aqgdu5v20f6k4</string>
+			</array>
+		</dict>
+	</array>
+
 </dict>
 </plist>

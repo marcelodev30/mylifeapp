@@ -51,6 +51,7 @@ class _LoginPageState extends State<LoginPage> {
             TextTitleAuth(title: AppLocalizations.of(context)!.loginTitle),
             TextFormField(
               controller: _email,
+              keyboardType: TextInputType.emailAddress,
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 hintText: AppLocalizations.of(context)!.loginEmailHint,

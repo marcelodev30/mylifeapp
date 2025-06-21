@@ -43,6 +43,9 @@ dependencies:
   intl: ^0.20.2
   provider: ^6.1.5
   uuid: ^4.5.1
+  local_auth: ^2.3.0
+  brasil_fields: ^1.18.0
+  google_sign_in: ^6.3.0
   
 
 dev_dependencies:
