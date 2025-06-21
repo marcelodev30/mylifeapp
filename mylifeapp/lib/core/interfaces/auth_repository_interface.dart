@@ -1,7 +1,8 @@
-import 'package:mylifeapp/data/models/user_models.dart';
+import 'package:mylifeapp/data/models/user_auth_models.dart';
 
 abstract class AuthRepository {
-  Future<UserModels> login(String email, String senha);
-  Future<UserModels> register(String email, String senha);
+  Future<AuthModels> login(String email, String senha);
+  Future<AuthModels> register(String email, String senha);
   Future<void> logout();
+  Stream<AuthModels?> get authStateChanges;
 }

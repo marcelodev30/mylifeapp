@@ -16,6 +16,8 @@ class _HomePageState extends State<HomePage> {
     Center(child: Text('Página Treinos ')),
     Center(child: Text('Página Perfil')),
   ];
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(

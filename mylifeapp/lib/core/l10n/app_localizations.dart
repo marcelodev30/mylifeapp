@@ -391,6 +391,12 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'E aí, {userName}'**
   String hellouser(String userName);
+
+  /// No description provided for @phraseAppBar.
+  ///
+  /// In pt, this message translates to:
+  /// **'Bora conferir o {phrase} de hoje?'**
+  String phraseAppBar(String phrase);
 }
 
 class _AppLocalizationsDelegate

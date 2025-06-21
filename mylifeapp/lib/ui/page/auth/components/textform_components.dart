@@ -4,15 +4,17 @@ import 'package:mylifeapp/core/l10n/app_localizations.dart';
 
 class TextFormSenha extends StatefulWidget {
   final void Function(String?)? onSaved;
+  final TextEditingController? controller;
   final String? Function(String?)? validator;
   final String? labelText;
   final String? hintText;
   const TextFormSenha({
     super.key,
-    required this.onSaved,
+    this.onSaved,
     this.validator,
     this.labelText,
     this.hintText,
+    this.controller,
   });
 
   @override
@@ -27,6 +29,7 @@ class _TextFormSenhaState extends State<TextFormSenha> {
     return TextFormField(
       obscureText: obscureText,
       onSaved: widget.onSaved,
+      controller: widget.controller,
       style: TextStyle(color: Colors.black87, fontSize: 16),
       decoration: InputDecoration(
         labelText:

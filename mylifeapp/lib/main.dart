@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:mylifeapp/app.dart';
 import 'package:mylifeapp/firebase_options.dart';
 
+import 'core/config/injector_config.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  setupInjector();
   runApp(const MyApp());
 }

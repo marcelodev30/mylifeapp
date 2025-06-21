@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/core/l10n/app_localizations.dart';
+import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 import '../../../core/config/constants/colors_config.dart';
 import '../../../core/config/constants/constants_config.dart';
@@ -17,6 +19,27 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final _fromKey = GlobalKey<FormState>();
+  final _email = TextEditingController();
+  final _senha = TextEditingController();
+  final _authControlle = getIt<AuthController>();
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _authControlle.addListener(() {
+      if (_authControlle.erro != null) {
+        debugPrint(_authControlle.erro);
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _email.dispose();
+    _senha.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return LayoutBaseLogin(
@@ -27,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             TextTitleAuth(title: AppLocalizations.of(context)!.loginTitle),
             TextFormField(
+              controller: _email,
               style: TextStyle(color: Colors.black),
               decoration: InputDecoration(
                 hintText: AppLocalizations.of(context)!.loginEmailHint,
@@ -36,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             Column(
               children: [
-                TextFormSenha(onSaved: (value) {}),
+                TextFormSenha(controller: _senha),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,6 +82,7 @@ class _LoginPageState extends State<LoginPage> {
                 AppButtonAuth(
                   title: AppLocalizations.of(context)!.loginButton,
                   onPressed: () {
+                    _authControlle.login(_email.text, _senha.text);
                     if (_fromKey.currentState!.validate()) {
                       _fromKey.currentState!.save();
                     }

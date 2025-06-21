@@ -166,4 +166,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String hellouser(String userName) {
     return 'E aí, $userName';
   }
+
+  @override
+  String phraseAppBar(String phrase) {
+    return 'Bora conferir o $phrase de hoje?';
+  }
 }

@@ -164,4 +164,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String hellouser(String userName) {
     return 'Hello $userName';
   }
+
+  @override
+  String phraseAppBar(String phrase) {
+    return 'Let\'s check out today\'s $phrase?';
+  }
 }

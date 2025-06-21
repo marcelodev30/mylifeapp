@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/interfaces/auth_repository_interface.dart';
-import 'package:mylifeapp/data/models/user_models.dart';
-
 import '../../core/exceptions/auth_exeption.dart';
 
 class AuthController extends ChangeNotifier {
   final AuthRepository _authRepository;
-  // ignore: unused_field
-  UserModels? _userModels;
+
   bool _isLoading = false;
   String? _erro;
 
@@ -20,7 +17,7 @@ class AuthController extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
     try {
-      _userModels = await _authRepository.login(email, senha);
+      await _authRepository.login(email, senha);
     } on AuthException catch (e) {
       _erro = e.message;
     } finally {
@@ -33,7 +30,7 @@ class AuthController extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
     try {
-      _userModels = await _authRepository.register(email, senha);
+      await _authRepository.register(email, senha);
     } on AuthException catch (e) {
       _erro = e.message;
     } finally {
@@ -44,7 +41,7 @@ class AuthController extends ChangeNotifier {
 
   Future<void> logout() async {
     await _authRepository.logout();
-    _userModels = null;
+    _erro = null;
     notifyListeners();
   }
 }
