@@ -1,16 +1,17 @@
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mylifeapp/core/exceptions/auth_exeption.dart';
 import 'package:mylifeapp/core/interfaces/auth_repository_interface.dart';
-//import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/data/models/user_auth_models.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthRepositoryFirebase implements AuthRepository {
   final FirebaseAuth _firebaseAuth;
+  final GoogleSignIn _googleSignIn;
 
-  AuthRepositoryFirebase(this._firebaseAuth);
+  AuthRepositoryFirebase(this._firebaseAuth) : _googleSignIn = GoogleSignIn();
 
   @override
-  Future<AuthModels> login(String email, String senha) async {
+  Future<AuthModels> signIn(String email, String senha) async {
     try {
       final user = await _firebaseAuth.signInWithEmailAndPassword(
         email: email,
@@ -71,5 +72,28 @@ class AuthRepositoryFirebase implements AuthRepository {
           ? null
           : AuthModels.fromFirebaseUser(firebaseUser);
     });
+  }
+
+  @override
+  Future<AuthModels> signInGoogle() async {
+    try {
+      final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+      if (googleUser == null) {
+        throw AuthException('authErrorGeneric');
+      }
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+      final user = await _firebaseAuth.signInWithCredential(credential);
+      if (user.user == null) {
+        throw AuthException('authErrorGeneric');
+      }
+      return AuthModels(uid: user.user!.uid, email: user.user!.email ?? '');
+    } catch (e) {
+      throw AuthException('authErrorGeneric');
+    }
   }
 }

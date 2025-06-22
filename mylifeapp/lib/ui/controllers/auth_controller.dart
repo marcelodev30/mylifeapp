@@ -13,11 +13,24 @@ class AuthController extends ChangeNotifier {
   bool get isLoading => _isLoading;
   String? get erro => _erro;
 
+  Future<void> signInGoogle() async {
+    _isLoading = true;
+    notifyListeners();
+    try {
+      await _authRepository.signInGoogle();
+    } on AuthException catch (e) {
+      _erro = e.message;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
+  }
+
   Future<void> login(String email, String senha) async {
     _isLoading = true;
     notifyListeners();
     try {
-      await _authRepository.login(email, senha);
+      await _authRepository.signIn(email, senha);
     } on AuthException catch (e) {
       _erro = e.message;
     } finally {

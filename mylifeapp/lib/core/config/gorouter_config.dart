@@ -4,6 +4,9 @@ import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/data/services/auth_service.dart';
 import 'package:mylifeapp/ui/page/auth/login_page.dart';
 import 'package:mylifeapp/ui/page/home/home_page.dart';
+import 'package:mylifeapp/ui/page/splash/splash_page.dart';
+
+import 'constants/gorouter_path_config.dart';
 
 class AppRouter {
   static final navigatorKey = GlobalKey<NavigatorState>();
@@ -11,28 +14,28 @@ class AppRouter {
   static final GoRouter route = GoRouter(
     navigatorKey: navigatorKey,
     refreshListenable: _authService,
-    initialLocation: '/login',
+    initialLocation: AppRouterPath.login,
     routes: [
       GoRoute(
-        path: '/login',
-        builder: (context, state) {
-          return LoginPage();
-        },
+        path: AppRouterPath.splash,
+        builder: (context, state) => SplashPage(),
       ),
       GoRoute(
-        path: '/home',
-        builder: (context, state) {
-          return HomePage();
-        },
+        path: AppRouterPath.login,
+        builder: (context, state) => LoginPage(),
+      ),
+      GoRoute(
+        path: AppRouterPath.home,
+        builder: (context, state) => HomePage(),
       ),
     ],
     redirect: (BuildContext context, GoRouterState state) {
       final bool isLoggedIn = _authService.isLoggedIn;
       final location = state.matchedLocation;
-      final isLoggingIn = location == '/login';
+      final isLoggingIn = location == AppRouterPath.login;
 
-      if (!isLoggedIn && !isLoggingIn) return '/login';
-      if (isLoggedIn && isLoggingIn) return '/home';
+      if (!isLoggedIn && !isLoggingIn) return AppRouterPath.login;
+      if (isLoggedIn && isLoggingIn) return AppRouterPath.home;
 
       return null;
     },

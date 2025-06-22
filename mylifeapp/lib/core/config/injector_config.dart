@@ -15,10 +15,7 @@ void setupInjector() {
   getIt.registerLazySingleton<FirebaseAuth>(() => FirebaseAuth.instance);
 
   getIt.registerLazySingleton<AuthRepository>(
-    () => AuthRepositoryFirebase(
-      getIt<FirebaseAuth>(),
-      //getIt<AppLocalizations>(),
-    ),
+    () => AuthRepositoryFirebase(getIt<FirebaseAuth>()),
   );
 
   getIt.registerSingleton<AuthService>(AuthService(getIt<AuthRepository>()));
