@@ -44,7 +44,7 @@ class AuthRepositoryFirebase implements AuthRepository {
   }
 
   @override
-  Future<AuthModels> register(String email, String senha) async {
+  Future<AuthModels> create(String email, String senha) async {
     try {
       var user = await _firebaseAuth.createUserWithEmailAndPassword(
         email: email,

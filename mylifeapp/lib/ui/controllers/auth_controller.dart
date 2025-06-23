@@ -43,7 +43,7 @@ class AuthController extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
     try {
-      await _authRepository.register(email, senha);
+      await _authRepository.create(email, senha);
     } on AuthException catch (e) {
       _erro = e.message;
     } finally {
