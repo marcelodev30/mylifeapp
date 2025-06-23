@@ -1,11 +1,11 @@
 import 'package:flutter/rendering.dart';
-import 'package:mylifeapp/data/models/treino/exercicio_models.dart';
-import 'package:mylifeapp/data/models/treino/serie_models.dart';
+import 'package:mylifeapp/data/models/exercicio_treino_models.dart';
+import 'package:mylifeapp/data/models/serie_treino_models.dart';
 
 void main() {
   var s = ExercicioTreinoModels(
     nome: 'SUPINO RETO MÁQUINA',
-    serie: [
+    series: [
       SerieTreinoModel(
         serie: 1,
         reps: 12,
@@ -13,7 +13,6 @@ void main() {
         controle: 'bom',
         velocidadeExecucao: 'vento',
         tipoSerie: 'Aquecimento',
-        intervaloseries: 90,
       ),
       SerieTreinoModel(
         serie: 2,

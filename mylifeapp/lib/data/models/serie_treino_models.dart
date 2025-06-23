@@ -8,7 +8,7 @@ class SerieTreinoModel {
   String? velocidadeExecucao;
   String? tipoSerie;
   String? controle;
-  double? intervaloseries;
+  double? intervaloSeries;
   bool falha;
   int? ajuda;
 
@@ -21,17 +21,20 @@ class SerieTreinoModel {
     this.tipoSerie,
     this.controle,
     this.velocidadeExecucao,
-    this.intervaloseries,
+    this.intervaloSeries,
+    String? id,
   }) : id = Uuid().v4();
 
   factory SerieTreinoModel.fromJson(Map<String, dynamic> map) {
     return SerieTreinoModel(
+      id: map['id'] as String?,
       serie: map['serie'] as int,
       tipoSerie: map['tipoSerie'] as String?,
       controle: map['controle'] as String?,
       velocidadeExecucao: map['velocidadeExecucao'] as String?,
       reps: map['reps'] as int,
       carga: (map['carga'] as num).toDouble(),
+      intervaloSeries: (map['intervaloSeries'] as num).toDouble(),
       falha: map['falha'] as bool,
       ajuda: map['ajuda'] as int?,
     );
@@ -46,11 +49,12 @@ class SerieTreinoModel {
       'carga': carga,
       'falha': falha,
       'ajuda': ajuda,
+      'intervaloSeries': intervaloSeries,
       'velocidadeExecucao': velocidadeExecucao,
     };
   }
 
   @override
   String toString() =>
-      'id: $id, Serie: $serie, Tipo de Serie: $tipoSerie, Reps: $reps, Carga: $carga, Falha: $falha, Velocidade de Execucao: $velocidadeExecucao';
+      'id: $id, Serie: $serie, Tipo de Serie: $tipoSerie, Reps: $reps, Carga: $carga, Falha: $falha, Velocidade de Execucao: $velocidadeExecucao, Intervalo Series: $intervaloSeries';
 }
