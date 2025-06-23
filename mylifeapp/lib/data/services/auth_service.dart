@@ -12,7 +12,7 @@ class AuthService extends ChangeNotifier {
       notifyListeners();
     });
   }
-
+//mylifeapp/assets/img/perfil.png
   bool get isLoggedIn => _userModelsAuth != null;
   AuthModels? get user => _userModelsAuth;
 }
