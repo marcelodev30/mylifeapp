@@ -6,4 +6,6 @@ class AppIcons {
   static IconData get profile => Icons.people;
   static IconData get search => Icons.search;
   static IconData get close => Icons.close;
+
+  static String get googleIcon => 'assets/icon/iconGoogle.svg';
 }

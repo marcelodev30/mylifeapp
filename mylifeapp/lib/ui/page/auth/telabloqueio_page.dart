@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
 import 'package:mylifeapp/core/config/constants/image_config.dart';
-// O import do 'textstyles_config.dart' não é mais necessário aqui se você não o tiver.
-// import 'package:mylifeapp/core/theme/textstyles_config.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 
 class ScreenLockPage extends StatefulWidget {

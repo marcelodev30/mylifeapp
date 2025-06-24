@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mylifeapp/core/config/constants/image_config.dart';
+import 'package:mylifeapp/core/config/constants/icons_config.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
@@ -106,7 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                 spacing: 8,
                 children: [
                   SizedBox(width: 0),
-                  SvgPicture.asset(AppImages.googleIcon, width: 24),
+                  SvgPicture.asset(AppIcons.googleIcon, width: 24),
                   Text(
                     'Sign Up with Google',
                     style: TextStyle(
