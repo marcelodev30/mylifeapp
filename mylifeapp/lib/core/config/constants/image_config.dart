@@ -1,5 +1,9 @@
 class AppImages {
-  static String get imgPerfil => "assets/img/perfil.png";
-  static String get imgLogoV1 => "assets/img/logo_v1.png";
-  static String get iconexplosion => "assets/img/Icon_fitness_explosion_v2.png";
+  static const String _basePath = 'assets/img';
+
+  static String get imgPerfil => "$_basePath/perfil.png";
+  static String get imgLogoV1 => "$_basePath/logo_v1.png";
+  static String get iconexplosion => "$_basePath/Icon_fitness_explosion_v2.png";
+
+  static String get googleIcon => 'assets/icon/iconGoogle.svg';
 }

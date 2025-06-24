@@ -18,8 +18,8 @@ class LayoutBaseLogin extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 16 * 5),
-                Image.asset(AppImages.imgLogoV1, width: 270, height: 270),
+                SizedBox(height: 8 * 9),
+                Image.asset(AppImages.imgLogoV1, height: 8 * 33),
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -45,13 +45,9 @@ class LayoutBaseLogin extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 16),
-                Card(
-                  elevation: 4,
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(padding: EdgeInsets.all(24), child: body),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: body,
                 ),
               ],
             ),

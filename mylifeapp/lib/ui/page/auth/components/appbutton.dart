@@ -27,7 +27,7 @@ class AppButtonAuth extends StatelessWidget {
           title,
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w700,
             color: AppColors.white,
           ),
         ),

@@ -30,7 +30,7 @@ class _TextFormSenhaState extends State<TextFormSenha> {
       obscureText: obscureText,
       onSaved: widget.onSaved,
       controller: widget.controller,
-      style: TextStyle(color: Colors.black87, fontSize: 16),
+      style: TextStyle(color: Colors.white, fontSize: 16),
       decoration: InputDecoration(
         labelText:
             widget.labelText ??

@@ -3,9 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/data/services/auth_service.dart';
 import 'package:mylifeapp/ui/page/auth/login_page.dart';
+import 'package:mylifeapp/ui/page/auth/telabloqueio_page.dart';
 import 'package:mylifeapp/ui/page/home/home_page.dart';
-import 'package:mylifeapp/ui/page/splash/splash_page.dart';
-
 import 'constants/gorouter_path_config.dart';
 
 class AppRouter {
@@ -17,16 +16,16 @@ class AppRouter {
     initialLocation: AppRouterPath.login,
     routes: [
       GoRoute(
-        path: AppRouterPath.splash,
-        builder: (context, state) => SplashPage(),
-      ),
-      GoRoute(
         path: AppRouterPath.login,
         builder: (context, state) => LoginPage(),
       ),
       GoRoute(
         path: AppRouterPath.home,
         builder: (context, state) => HomePage(),
+      ),
+      GoRoute(
+        path: AppRouterPath.lock,
+        builder: (context, state) => ScreenLockPage(),
       ),
     ],
     redirect: (BuildContext context, GoRouterState state) {

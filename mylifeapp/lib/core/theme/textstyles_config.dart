@@ -32,6 +32,6 @@ class AppTextStyles {
     decoration: TextDecoration.underline,
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: Colors.black,
+    color: Colors.white,
   );
 }

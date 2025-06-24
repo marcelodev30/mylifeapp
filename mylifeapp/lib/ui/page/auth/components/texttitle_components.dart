@@ -13,7 +13,7 @@ class TextTitleAuth extends StatelessWidget {
       style: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
-        color: AppColors.black,
+        color: AppColors.white,
       ),
     );
   }

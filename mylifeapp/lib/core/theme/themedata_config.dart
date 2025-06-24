@@ -17,17 +17,17 @@ class AppThemeData {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      prefixIconColor: AppColors.black,
-      suffixIconColor: AppColors.black,
+      prefixIconColor: AppColors.white,
+      suffixIconColor: AppColors.white,
       filled: true,
       fillColor: Colors.transparent,
       labelStyle: TextStyle(
-        color: AppColors.black,
+        color: AppColors.white,
         fontSize: 16,
         fontWeight: FontWeight.w600,
       ),
       hintStyle: TextStyle(
-        color: AppColors.black,
+        color: AppColors.white,
         fontSize: 14,
         fontWeight: FontWeight.w600,
       ),

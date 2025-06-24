@@ -1,7 +1,7 @@
 import 'package:result_dart/result_dart.dart';
 
 abstract class RepositoryStorage<T extends Object> {
-  Future<Result<T>> save(T dados);
+  Future<Result<T>> save(T models);
   Future<Result<List<T>>> fetchAll();
   Future<Result<T>> fetchById(String id);
   Future<Result<T>> update(T models);

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:mylifeapp/core/config/constants/image_config.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
+import 'package:mylifeapp/ui/page/auth/components/appbutton_google.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 import '../../../core/config/constants/colors_config.dart';
 import '../../../core/config/constants/constants_config.dart';
@@ -52,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
             TextFormField(
               controller: _email,
               keyboardType: TextInputType.emailAddress,
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: AppLocalizations.of(context)!.loginEmailHint,
                 label: Text(AppLocalizations.of(context)!.signUpEmailLabel),
@@ -78,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             Row(
-              spacing: 5,
+              spacing: 16,
               children: [
                 AppButtonAuth(
                   title: AppLocalizations.of(context)!.loginButton,
@@ -93,9 +96,29 @@ class _LoginPageState extends State<LoginPage> {
                 AppButtonAuth(
                   title: AppLocalizations.of(context)!.loginCreateAccountButton,
                   onPressed: () {},
-                  color: AppColors.black,
+                  color: AppColors.transparent,
                 ),
               ],
+            ),
+            AppbuttonGoogle(
+              text: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                spacing: 8,
+                children: [
+                  SizedBox(width: 0),
+                  SvgPicture.asset(AppImages.googleIcon, width: 24),
+                  Text(
+                    'Sign Up with Google',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.black,
+                    ),
+                  ),
+                ],
+              ),
+              color: AppColors.white,
+              onPressed: () {},
             ),
           ],
         ),

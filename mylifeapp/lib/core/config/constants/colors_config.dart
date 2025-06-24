@@ -7,6 +7,7 @@ class AppColors {
   static Color get gray => Colors.grey;
   static Color get blue => Colors.blue;
   static Color get red => Colors.red;
+  static Color get transparent => Colors.transparent;
   static Color get success => Color(0xFF388E3C);
   static Color get error => Color(0xFFD32F2F);
   static Color get warning => Color(0xFFF57C00);

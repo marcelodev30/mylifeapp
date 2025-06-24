@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mylifeapp/core/config/constants/icons_config.dart';
 import 'package:mylifeapp/ui/components/appbar_components.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -32,17 +33,17 @@ class _HomePageState extends State<HomePage> {
         },
         items: [
           SalomonBottomBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(AppIcons.home),
             title: Text('Home'),
             selectedColor: Colors.white,
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.fitness_center),
+            icon: Icon(AppIcons.fitness),
             title: Text('Treinos'),
             selectedColor: Colors.white,
           ),
           SalomonBottomBarItem(
-            icon: Icon(Icons.people),
+            icon: Icon(AppIcons.profile),
             title: Text('Profile'),
             selectedColor: Colors.white,
           ),
