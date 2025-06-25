@@ -107,7 +107,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginSubtitle.
   ///
   /// In pt, this message translates to:
-  /// **'Bem-vindo de volta! Sentimos sua falta.'**
+  /// **'Bem-vindo de volta!'**
   String get loginSubtitle;
 
   /// No description provided for @loginEmailLabel.

@@ -12,7 +12,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginTitle => 'Login';
 
   @override
-  String get loginSubtitle => 'Welcome back! We missed you.';
+  String get loginSubtitle => 'Welcome back!';
 
   @override
   String get loginEmailLabel => 'Email';

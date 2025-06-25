@@ -1,7 +1,7 @@
 {
   "@@locale": "pt",
   "loginTitle": "Entrar",
-  "loginSubtitle": "Bem-vindo de volta! Sentimos sua falta.",
+  "loginSubtitle": "Bem-vindo de volta!",
   "loginEmailLabel": "E-mail",
   "loginEmailHint": "seuemail@exemplo.com",
   "loginPasswordLabel": "Senha",

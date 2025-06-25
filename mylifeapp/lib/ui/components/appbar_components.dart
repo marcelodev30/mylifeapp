@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
+import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/core/l10n/app_localizations.dart';
+import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import '../../core/config/constants/image_config.dart';
 import '../../core/theme/textstyles_config.dart';
 
-class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
+class MyAppBar extends StatefulWidget implements PreferredSizeWidget {
   final String name;
   final String phrase;
   const MyAppBar({
@@ -14,12 +16,19 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
+  State<MyAppBar> createState() => _MyAppBarState();
+
+  @override
   Size get preferredSize => const Size.fromHeight(160);
+}
+
+class _MyAppBarState extends State<MyAppBar> {
+  final _authControlle = getIt<AuthController>();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: preferredSize.height,
+      height: widget.preferredSize.height,
       decoration: BoxDecoration(
         color: AppColors.deepNavy.withValues(alpha: 0.6),
         borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(50)),
@@ -48,12 +57,18 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      AppLocalizations.of(context)!.hellouser(name),
+                      AppLocalizations.of(context)!.hellouser(widget.name),
                       style: AppTextStyles.appBarTitle18,
                     ),
-                    Text(phrase, style: AppTextStyles.appBarSubtitle20),
+                    Text(widget.phrase, style: AppTextStyles.appBarSubtitle20),
                   ],
                 ),
+              ),
+              IconButton(
+                onPressed: () async {
+                  _authControlle.logout();
+                },
+                icon: Icon(Icons.exit_to_app),
               ),
               //Image.asset(ConstantsApp.iconexplosion),
             ],

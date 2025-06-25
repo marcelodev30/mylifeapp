@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
 
-class AppButtonAuth extends StatelessWidget {
+class AppButtonAuthV1 extends StatelessWidget {
   final String title;
   final void Function() onPressed;
   final Color color;
-  const AppButtonAuth({
+  const AppButtonAuthV1({
     super.key,
     required this.title,
     required this.onPressed,

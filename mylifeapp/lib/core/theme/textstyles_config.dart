@@ -30,8 +30,9 @@ class AppTextStyles {
 
   static TextStyle get text16W700Subindo => TextStyle(
     decoration: TextDecoration.underline,
+    decorationColor: Colors.blueAccent,
     fontSize: 16,
     fontWeight: FontWeight.w700,
-    color: Colors.white,
+    color: Colors.blueAccent,
   );
 }

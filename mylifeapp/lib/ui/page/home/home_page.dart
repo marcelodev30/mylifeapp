@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/icons_config.dart';
 import 'package:mylifeapp/ui/components/appbar_components.dart';
+import 'package:mylifeapp/ui/page/Settings/settings_page.dart';
+import 'package:mylifeapp/ui/page/fitness/fitness_page.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,8 +16,8 @@ class _HomePageState extends State<HomePage> {
   var idex = 0;
   final _pages = [
     Center(child: Text('Página Início')),
-    Center(child: Text('Página Treinos ')),
-    Center(child: Text('Página Perfil')),
+    FitnessPage(),
+    SettingsPage(),
   ];
 
   @override

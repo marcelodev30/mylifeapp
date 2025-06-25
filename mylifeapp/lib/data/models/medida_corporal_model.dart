@@ -14,6 +14,9 @@ class MedidaCorporalModel {
   final double? bracoEsquerdoCm;
   final double? coxaDireitaCm;
   final double? coxaEsquerdaCm;
+  final double? antebracoDireitaCm;
+  final double? antebracoEsquerdaCm;
+  final double? panturrilha;
 
   MedidaCorporalModel({
     required this.idUsuario,
@@ -27,6 +30,9 @@ class MedidaCorporalModel {
     this.bracoEsquerdoCm,
     this.coxaDireitaCm,
     this.coxaEsquerdaCm,
+    this.antebracoDireitaCm,
+    this.antebracoEsquerdaCm,
+    this.panturrilha,
     DateTime? create,
     String? id,
   }) : id = Uuid().v4(),
