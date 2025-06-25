@@ -7,7 +7,6 @@ import 'package:mylifeapp/core/l10n/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/ui/page/auth/components/appbutton_compnent.dart';
 import 'package:mylifeapp/ui/page/auth/components/apptitletext_component.dart';
-import 'package:mylifeapp/ui/page/auth/components/texttitle_components.dart';
 import '../../../core/config/constants/colors_config.dart';
 import '../../../core/theme/textstyles_config.dart';
 import 'components/textform_components.dart';
