@@ -5,6 +5,13 @@ import '../config/constants/constants_config.dart';
 class AppThemeData {
   static ThemeData get dark => ThemeData.dark().copyWith(
     scaffoldBackgroundColor: AppColors.black,
+
+    cardTheme: CardThemeData(
+      color: AppColors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadiusGeometry.circular(16),
+      ),
+    ),
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         shape: WidgetStatePropertyAll(
@@ -56,15 +63,27 @@ class AppThemeData {
       errorBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppConstants.borderRadius),
         borderSide: BorderSide(
-          color: Colors.redAccent,
+          color: AppColors.error,
           width: AppConstants.borderSideWidth,
         ),
       ),
       errorStyle: TextStyle(
-        color: AppColors.red,
+        color: AppColors.error,
         fontSize: 16,
         fontWeight: FontWeight.w600,
       ),
+    ),
+    textTheme: TextTheme(
+      titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+      bodyLarge: TextStyle(
+        color: AppColors.black,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.transparent,
+      centerTitle: true,
     ),
   );
 }

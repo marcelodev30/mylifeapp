@@ -23,8 +23,12 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(name: 'Marcelo Alves'),
-      body: _pages[idex],
+      appBar: AppBar(), //MyAppBar(name: 'Marcelo Alves'),
+
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
+        child: _pages[idex],
+      ),
       bottomNavigationBar: SalomonBottomBar(
         margin: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
         currentIndex: idex,

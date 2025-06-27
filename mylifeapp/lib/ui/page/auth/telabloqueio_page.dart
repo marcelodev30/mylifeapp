@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
-import 'package:mylifeapp/core/config/constants/image_config.dart';
+import 'package:mylifeapp/ui/components/profile_avatar_components.dart';
 import 'package:mylifeapp/ui/page/auth/layout_base.dart';
 
 class ScreenLockPage extends StatefulWidget {
@@ -19,23 +19,7 @@ class _ScreenLockPageState extends State<ScreenLockPage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: AppColors.green, width: 3),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.white.withValues(alpha: 0.1),
-                    blurRadius: 8,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
-              ),
-              child: CircleAvatar(
-                radius: 48,
-                backgroundImage: AssetImage(AppImages.imgPerfil),
-              ),
-            ),
+            CircleImgProfile(),
             const SizedBox(height: 16),
             Text(
               "Marcelo Alves",
