@@ -7,5 +7,14 @@ class AppIcons {
   static IconData get search => Icons.search;
   static IconData get close => Icons.close;
 
+  static IconData get breakfast => Icons.free_breakfast_rounded;
+  static IconData get morningSnack => Icons.apple_rounded;
+  static IconData get lunch => Icons.lunch_dining_rounded;
+  static IconData get afternoonSnack => Icons.bakery_dining_rounded;
+  static IconData get preWorkout => Icons.bolt_rounded;
+  static IconData get postWorkout => Icons.blender_rounded;
+  static IconData get dinner => Icons.dinner_dining_rounded;
+  static IconData get supper => Icons.nightlight_round;
+
   static String get googleIcon => 'assets/icon/iconGoogle.svg';
 }

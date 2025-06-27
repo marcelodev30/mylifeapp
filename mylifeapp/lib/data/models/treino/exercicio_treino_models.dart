@@ -1,10 +1,9 @@
-import 'package:mylifeapp/data/models/serie_treino_models.dart';
+import 'package:mylifeapp/data/models/treino/serie_treino_models.dart';
 import 'package:uuid/uuid.dart';
 
 class ExercicioTreinoModels {
   final String id;
   final String nome;
-  final DateTime createDataTime;
   List<SerieTreinoModel> series;
   int? percepcaoRPE;
   // Volume Total de séries x reps x carga
@@ -15,8 +14,7 @@ class ExercicioTreinoModels {
     this.percepcaoRPE,
     String? id,
     DateTime? createDataTime,
-  }) : id = Uuid().v4(),
-       createDataTime = DateTime.now();
+  }) : id = Uuid().v4();
 
   factory ExercicioTreinoModels.fromJson(Map<String, dynamic> json) {
     return ExercicioTreinoModels(
@@ -39,7 +37,6 @@ class ExercicioTreinoModels {
     return {
       'id': id,
       'nome': nome,
-      'createDataTime': createDataTime.toIso8601String(),
       'percepcaoRPE': percepcaoRPE,
       'series': series.map((serie) => serie.toJson()).toList(),
     };
