@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/icons_config.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 //import 'package:mylifeapp/ui/components/appbar_components.dart';
 import 'package:mylifeapp/ui/page/Settings/settings_page.dart';
 import 'package:mylifeapp/ui/page/fitness/fitness_page.dart';
@@ -40,7 +41,7 @@ class _HomePageState extends State<HomePage> {
         items: [
           SalomonBottomBarItem(
             icon: Icon(AppIcons.home),
-            title: Text('Home'),
+            title: Text(AppLocalizations.of(context)!.homeScreenTitle),
             selectedColor: Colors.white,
           ),
           SalomonBottomBarItem(
@@ -50,7 +51,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SalomonBottomBarItem(
             icon: Icon(AppIcons.profile),
-            title: Text('Profile'),
+            title: Text(AppLocalizations.of(context)!.settingsScreenTitle),
             selectedColor: Colors.white,
           ),
         ],

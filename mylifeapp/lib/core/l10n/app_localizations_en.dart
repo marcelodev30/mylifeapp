@@ -39,7 +39,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginNoAccountPrompt => 'Don\'t have an account?';
 
   @override
-  String get loginCreateAccountButton => 'Sign up here';
+  String get loginCreateAccountButton => 'Sign up';
 
   @override
   String get signUpTitle => 'Create Account';
@@ -76,8 +76,7 @@ class AppLocalizationsEn extends AppLocalizations {
       'By signing up, you agree to our';
 
   @override
-  String get signUpTermsAndConditionsLink =>
-      'Terms of Service and Privacy Policy.';
+  String get signUpTermsAndConditionsLink => 'Terms of Use and Privacy Policy.';
 
   @override
   String get signUpButton => 'Create my account';
@@ -93,13 +92,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get forgotPasswordSubtitle =>
-      'Enter your email and we\'ll send you a link to reset your password.';
+      'Enter your email and we\'ll send a link to reset your password.';
 
   @override
   String get forgotPasswordSendButton => 'Send Reset Link';
-
-  @override
-  String get genericLoading => 'Loading...';
 
   @override
   String get genericErrorTitle => 'An Error Occurred';
@@ -108,38 +104,20 @@ class AppLocalizationsEn extends AppLocalizations {
   String get genericSuccessTitle => 'Success!';
 
   @override
-  String get genericOk => 'OK';
-
-  @override
-  String get genericCancel => 'Cancel';
-
-  @override
-  String get genericContinue => 'Continue';
-
-  @override
-  String get genericSave => 'Save';
-
-  @override
-  String get genericNext => 'Next';
-
-  @override
-  String get genericBack => 'Back';
-
-  @override
-  String get validationEmailInvalid => 'Please enter a valid email address.';
+  String get validationEmailInvalid => 'Please enter a valid email.';
 
   @override
   String get validationPasswordShort =>
-      'Password must be at least 8 characters long.';
+      'Password must be at least 8 characters.';
 
   @override
-  String get validationPasswordsDoNotMatch => 'The passwords do not match.';
+  String get validationPasswordsDoNotMatch => 'Passwords do not match.';
 
   @override
   String get validationFieldRequired => 'This field is required.';
 
   @override
-  String get authErrorUserNotFound => 'No user was found with this email.';
+  String get authErrorUserNotFound => 'No user found for this email.';
 
   @override
   String get authErrorWrongPassword => 'Incorrect password. Please try again.';
@@ -162,11 +140,194 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String hellouser(String userName) {
-    return 'Hello $userName';
+    return 'Hey, $userName';
   }
 
   @override
+  String get settingsScreenTitle => 'Settings';
+
+  @override
+  String get profileScreenTitle => 'My Profile';
+
+  @override
+  String get workoutsScreenTitle => 'My Workouts';
+
+  @override
+  String get homeScreenTitle => 'Home';
+
+  @override
+  String get dataStateLoading => 'Loading...';
+
+  @override
+  String get save => 'Save';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get edit => 'Edit';
+
+  @override
+  String get delete => 'Delete';
+
+  @override
+  String get add => 'Add';
+
+  @override
+  String get next => 'Next';
+
+  @override
+  String get back => 'Back';
+
+  @override
+  String get continueAction => 'Continue';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get search => 'Search';
+
+  @override
+  String get filter => 'Filter';
+
+  @override
+  String get apply => 'Apply';
+
+  @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get yes => 'Yes';
+
+  @override
+  String get no => 'No';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get dataStateNoData => 'No data found.';
+
+  @override
+  String get dataStateError => 'Could not load data. Please try again.';
+
+  @override
   String phraseAppBar(String phrase) {
-    return 'Let\'s check out today\'s $phrase?';
+    return 'Ready to check today\'s $phrase?';
   }
+
+  @override
+  String get status_pendente => 'Pending';
+
+  @override
+  String get status_processando => 'Processing';
+
+  @override
+  String get status_concluido => 'Completed';
+
+  @override
+  String get status_falhou => 'Failed';
+
+  @override
+  String get user_type_aluno => 'Student';
+
+  @override
+  String get user_type_trainer => 'Personal Trainer';
+
+  @override
+  String get user_type_nutricionista => 'Nutritionist';
+
+  @override
+  String get series_type_aquecimento => 'Warm-up';
+
+  @override
+  String get series_type_preparacao => 'Ramp-up Set';
+
+  @override
+  String get series_type_reconhecimento => 'Feeler Set';
+
+  @override
+  String get series_type_trabalho => 'Working Set';
+
+  @override
+  String get week_day_segunda_long => 'Monday';
+
+  @override
+  String get week_day_terca_long => 'Tuesday';
+
+  @override
+  String get week_day_quarta_long => 'Wednesday';
+
+  @override
+  String get week_day_quinta_long => 'Thursday';
+
+  @override
+  String get week_day_sexta_long => 'Friday';
+
+  @override
+  String get week_day_sabado_long => 'Saturday';
+
+  @override
+  String get week_day_domingo_long => 'Sunday';
+
+  @override
+  String get week_day_segunda_short => 'MON';
+
+  @override
+  String get week_day_terca_short => 'TUE';
+
+  @override
+  String get week_day_quarta_short => 'WED';
+
+  @override
+  String get week_day_quinta_short => 'THU';
+
+  @override
+  String get week_day_sexta_short => 'FRI';
+
+  @override
+  String get week_day_sabado_short => 'SAT';
+
+  @override
+  String get week_day_domingo_short => 'SUN';
+
+  @override
+  String get effort_level_muito_leve => 'Very Light';
+
+  @override
+  String get effort_level_leve => 'Light';
+
+  @override
+  String get effort_level_moderado => 'Moderate';
+
+  @override
+  String get effort_level_dificil => 'Hard';
+
+  @override
+  String get effort_level_maximo => 'Maximum Effort';
+
+  @override
+  String get meal_type_cafe_da_manha => 'Breakfast';
+
+  @override
+  String get meal_type_lanche_da_manha => 'Morning Snack';
+
+  @override
+  String get meal_type_almoco => 'Lunch';
+
+  @override
+  String get meal_type_lanche_da_tarde => 'Afternoon Snack';
+
+  @override
+  String get meal_type_pre_treino => 'Pre-Workout';
+
+  @override
+  String get meal_type_pos_treino => 'Post-Workout';
+
+  @override
+  String get meal_type_jantar => 'Dinner';
+
+  @override
+  String get meal_type_ceia => 'Late-night Snack';
 }

@@ -1,3 +1,4 @@
+import 'package:mylifeapp/core/config/constants/enum_config.dart';
 import 'package:uuid/uuid.dart';
 
 class SerieTreinoModel {
@@ -6,7 +7,7 @@ class SerieTreinoModel {
   final int reps;
   final double carga;
   String? velocidadeExecucao;
-  String? tipoSerie;
+  TipoSerie? tipoSerie;
   String? controle;
   double? intervaloSeries;
   bool falha;
@@ -29,7 +30,10 @@ class SerieTreinoModel {
     return SerieTreinoModel(
       id: map['id'] as String?,
       serie: map['serie'] as int,
-      tipoSerie: map['tipoSerie'] as String?,
+      tipoSerie:
+          map['percepcaoRPE'] != null
+              ? TipoSerie.values.byName(map['tipoSerie'])
+              : null,
       controle: map['controle'] as String?,
       velocidadeExecucao: map['velocidadeExecucao'] as String?,
       reps: map['reps'] as int,
@@ -56,5 +60,5 @@ class SerieTreinoModel {
 
   @override
   String toString() =>
-      'id: $id, Serie: $serie, Tipo de Serie: $tipoSerie, Reps: $reps, Carga: $carga, Falha: $falha, Velocidade de Execucao: $velocidadeExecucao, Intervalo Series: $intervaloSeries';
+      'id: $id, Serie: $serie, Tipo de Serie: ${tipoSerie.toString()}, Reps: $reps, Carga: $carga, Falha: $falha, Velocidade de Execucao: $velocidadeExecucao, Intervalo Series: $intervaloSeries';
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppIcons {
+  static const String _basePath = 'assets/icon';
+
   static IconData get home => Icons.home;
   static IconData get fitness => Icons.fitness_center;
   static IconData get profile => Icons.people;
@@ -21,5 +23,7 @@ class AppIcons {
   static IconData get recognition => Icons.visibility_rounded;
   static IconData get workSeries => Icons.task_alt_rounded;
 
-  static String get googleIcon => 'assets/icon/iconGoogle.svg';
+  
+
+  static String get googleIcon => '$_basePath/iconGoogle.svg';
 }

@@ -99,31 +99,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get forgotPasswordSendButton => 'Enviar Link de Recuperação';
 
   @override
-  String get genericLoading => 'Carregando...';
-
-  @override
   String get genericErrorTitle => 'Ocorreu um Erro';
 
   @override
   String get genericSuccessTitle => 'Sucesso!';
-
-  @override
-  String get genericOk => 'OK';
-
-  @override
-  String get genericCancel => 'Cancelar';
-
-  @override
-  String get genericContinue => 'Continuar';
-
-  @override
-  String get genericSave => 'Salvar';
-
-  @override
-  String get genericNext => 'Próximo';
-
-  @override
-  String get genericBack => 'Voltar';
 
   @override
   String get validationEmailInvalid => 'Por favor, insira um e-mail válido.';
@@ -168,7 +147,191 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
+  String get settingsScreenTitle => 'Configurações';
+
+  @override
+  String get profileScreenTitle => 'Meu Perfil';
+
+  @override
+  String get workoutsScreenTitle => 'Meus Treinos';
+
+  @override
+  String get homeScreenTitle => 'Início';
+
+  @override
+  String get dataStateLoading => 'Carregando...';
+
+  @override
+  String get save => 'Salvar';
+
+  @override
+  String get cancel => 'Cancelar';
+
+  @override
+  String get edit => 'Editar';
+
+  @override
+  String get delete => 'Excluir';
+
+  @override
+  String get add => 'Adicionar';
+
+  @override
+  String get next => 'Próximo';
+
+  @override
+  String get back => 'Voltar';
+
+  @override
+  String get continueAction => 'Continuar';
+
+  @override
+  String get close => 'Fechar';
+
+  @override
+  String get search => 'Buscar';
+
+  @override
+  String get filter => 'Filtrar';
+
+  @override
+  String get apply => 'Aplicar';
+
+  @override
+  String get confirm => 'Confirmar';
+
+  @override
+  String get yes => 'Sim';
+
+  @override
+  String get no => 'Não';
+
+  @override
+  String get ok => 'OK';
+
+  @override
+  String get dataStateNoData => 'Nenhum dado encontrado.';
+
+  @override
+  String get dataStateError =>
+      'Não foi possível carregar os dados. Tente novamente.';
+
+  @override
   String phraseAppBar(String phrase) {
     return 'Bora conferir o $phrase de hoje?';
   }
+
+  @override
+  String get status_pendente => 'Pendente';
+
+  @override
+  String get status_processando => 'Processando';
+
+  @override
+  String get status_concluido => 'Concluído';
+
+  @override
+  String get status_falhou => 'Falhou';
+
+  @override
+  String get user_type_aluno => 'Aluno';
+
+  @override
+  String get user_type_trainer => 'Personal Trainer';
+
+  @override
+  String get user_type_nutricionista => 'Nutricionista';
+
+  @override
+  String get series_type_aquecimento => 'Aquecimento';
+
+  @override
+  String get series_type_preparacao => 'Série de Preparação';
+
+  @override
+  String get series_type_reconhecimento => 'Reconhecimento de Carga';
+
+  @override
+  String get series_type_trabalho => 'Série de Trabalho';
+
+  @override
+  String get week_day_segunda_long => 'Segunda-feira';
+
+  @override
+  String get week_day_terca_long => 'Terça-feira';
+
+  @override
+  String get week_day_quarta_long => 'Quarta-feira';
+
+  @override
+  String get week_day_quinta_long => 'Quinta-feira';
+
+  @override
+  String get week_day_sexta_long => 'Sexta-feira';
+
+  @override
+  String get week_day_sabado_long => 'Sábado';
+
+  @override
+  String get week_day_domingo_long => 'Domingo';
+
+  @override
+  String get week_day_segunda_short => 'SEG';
+
+  @override
+  String get week_day_terca_short => 'TER';
+
+  @override
+  String get week_day_quarta_short => 'QUA';
+
+  @override
+  String get week_day_quinta_short => 'QUI';
+
+  @override
+  String get week_day_sexta_short => 'SEX';
+
+  @override
+  String get week_day_sabado_short => 'SÁB';
+
+  @override
+  String get week_day_domingo_short => 'DOM';
+
+  @override
+  String get effort_level_muito_leve => 'Muito Leve';
+
+  @override
+  String get effort_level_leve => 'Leve';
+
+  @override
+  String get effort_level_moderado => 'Moderado';
+
+  @override
+  String get effort_level_dificil => 'Difícil';
+
+  @override
+  String get effort_level_maximo => 'Máximo Esforço';
+
+  @override
+  String get meal_type_cafe_da_manha => 'Café da Manhã';
+
+  @override
+  String get meal_type_lanche_da_manha => 'Lanche da Manhã';
+
+  @override
+  String get meal_type_almoco => 'Almoço';
+
+  @override
+  String get meal_type_lanche_da_tarde => 'Lanche da Tarde';
+
+  @override
+  String get meal_type_pre_treino => 'Pré-Treino';
+
+  @override
+  String get meal_type_pos_treino => 'Pós-Treino';
+
+  @override
+  String get meal_type_jantar => 'Jantar';
+
+  @override
+  String get meal_type_ceia => 'Ceia';
 }

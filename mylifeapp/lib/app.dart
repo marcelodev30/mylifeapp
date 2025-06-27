@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      title: AppString.titleApp,
+      title: AppStrings.titleApp,
       theme: AppThemeData.dark,
       routerConfig: AppRouter.route,
       locale: Locale('pt'),

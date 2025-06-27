@@ -1,4 +1,5 @@
 import 'package:flutter/rendering.dart';
+import 'package:mylifeapp/core/config/constants/enum_config.dart';
 import 'package:mylifeapp/data/models/treino/exercicio_treino_models.dart';
 import 'package:mylifeapp/data/models/treino/serie_treino_models.dart';
 import 'package:mylifeapp/data/models/treino/treino_dia_models.dart';
@@ -16,13 +17,13 @@ void main() {
             carga: 15,
             controle: 'bom',
             velocidadeExecucao: 'vento',
-            tipoSerie: 'Aquecimento',
+            tipoSerie: TipoSerie.aquecimento,
           ),
           SerieTreinoModel(
             serie: 2,
             reps: 8,
             carga: 30,
-            tipoSerie: 'Série de Preparação',
+            tipoSerie: TipoSerie.preparacao,
             controle: 'bom',
             velocidadeExecucao: 'lento',
           ),
@@ -30,7 +31,7 @@ void main() {
             serie: 3,
             reps: 7,
             carga: 50,
-            tipoSerie: 'Série Válida',
+            tipoSerie: TipoSerie.serieDeTrabalho,
             falha: true,
             ajuda: 0,
             velocidadeExecucao: 'lento',
@@ -39,7 +40,7 @@ void main() {
             serie: 4,
             reps: 7,
             carga: 60,
-            tipoSerie: 'Série Válida',
+            tipoSerie: TipoSerie.serieDeTrabalho,
             falha: true,
             ajuda: 0,
             velocidadeExecucao: 'lento',
@@ -55,13 +56,13 @@ void main() {
             carga: 15,
             controle: 'bom',
             velocidadeExecucao: 'vento',
-            tipoSerie: 'Aquecimento',
+            tipoSerie: TipoSerie.aquecimento,
           ),
           SerieTreinoModel(
             serie: 2,
             reps: 8,
             carga: 25,
-            tipoSerie: 'Série de Preparação',
+            tipoSerie: TipoSerie.preparacao,
             controle: 'bom',
             velocidadeExecucao: 'lento',
           ),
@@ -69,7 +70,7 @@ void main() {
             serie: 3,
             reps: 7,
             carga: 30,
-            tipoSerie: 'Série Válida',
+            tipoSerie: TipoSerie.serieDeTrabalho,
             falha: true,
             ajuda: 0,
             velocidadeExecucao: 'lento',

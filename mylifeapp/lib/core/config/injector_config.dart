@@ -27,8 +27,8 @@ void setupInjector() {
   getIt.registerFactory<AppLocalizations>(() {
     final context = AppRouter.navigatorKey.currentContext;
     if (context == null) {
-      debugPrint(AppString.erroBuildContext);
-      throw Exception(AppString.erroBuildContext);
+      debugPrint(AppStrings.erroBuildContext);
+      throw Exception(AppStrings.erroBuildContext);
     }
     return AppLocalizations.of(context)!;
   });

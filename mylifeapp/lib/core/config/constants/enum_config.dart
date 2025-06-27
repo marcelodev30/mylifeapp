@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/icons_config.dart';
+import 'package:mylifeapp/core/l10n/app_localizations.dart';
 
 enum Status { pendente, processando, concluido, falhou }
 
@@ -24,17 +25,20 @@ enum TipoRefeicao {
   ceia,
 }
 
+// =======================================================================
+// Tipo de Serie do Trenio
 extension TipoSerieExtension on TipoSerie {
-  String get displayName {
+  String displayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case TipoSerie.aquecimento:
-        return 'Aquecimento';
+        return l10n.series_type_aquecimento;
       case TipoSerie.preparacao:
-        return 'Série de Preparação';
+        return l10n.series_type_preparacao;
       case TipoSerie.reconhecimento:
-        return 'Reconhecimento de Carga';
+        return l10n.series_type_reconhecimento;
       case TipoSerie.serieDeTrabalho:
-        return 'Série de Trabalho';
+        return l10n.series_type_trabalho;
     }
   }
 
@@ -68,64 +72,68 @@ extension TipoSerieExtension on TipoSerie {
 // =======================================================================
 // Dias da Semana
 extension DiaDaSemanaExtension on DiaDaSemana {
-  String get displayName {
+  String longDisplayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case DiaDaSemana.segunda:
-        return 'Segunda-feira';
+        return l10n.week_day_segunda_long;
       case DiaDaSemana.terca:
-        return 'Terça-feira';
+        return l10n.week_day_terca_long;
       case DiaDaSemana.quarta:
-        return 'Quarta-feira';
+        return l10n.week_day_quarta_long;
       case DiaDaSemana.quinta:
-        return 'Quinta-feira';
+        return l10n.week_day_quinta_long;
       case DiaDaSemana.sexta:
-        return 'Sexta-feira';
+        return l10n.week_day_sexta_long;
       case DiaDaSemana.sabado:
-        return 'Sábado';
+        return l10n.week_day_sabado_long;
       case DiaDaSemana.domingo:
-        return 'Domingo';
+        return l10n.week_day_domingo_long;
     }
   }
 
-  String get shortDisplayName {
+  /// Retorna a chave para o nome curto do dia (ex: "SEG").
+  String shortDisplayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case DiaDaSemana.segunda:
-        return 'SEG';
+        return l10n.week_day_segunda_short;
       case DiaDaSemana.terca:
-        return 'TER';
+        return l10n.week_day_terca_short;
       case DiaDaSemana.quarta:
-        return 'QUA';
+        return l10n.week_day_quarta_short;
       case DiaDaSemana.quinta:
-        return 'QUI';
+        return l10n.week_day_quinta_short;
       case DiaDaSemana.sexta:
-        return 'SEX';
+        return l10n.week_day_sexta_short;
       case DiaDaSemana.sabado:
-        return 'SÁB';
+        return l10n.week_day_sabado_short;
       case DiaDaSemana.domingo:
-        return 'DOM';
+        return l10n.week_day_domingo_short;
     }
   }
 }
 
 extension TipoRefeicaoExtension on TipoRefeicao {
-  String get displayName {
+  String displayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case TipoRefeicao.cafeDaManha:
-        return 'Café da Manhã';
+        return l10n.meal_type_cafe_da_manha;
       case TipoRefeicao.lancheDaManha:
-        return 'Lanche da Manhã';
+        return l10n.meal_type_lanche_da_manha;
       case TipoRefeicao.almoco:
-        return 'Almoço';
+        return l10n.meal_type_almoco;
       case TipoRefeicao.lancheDaTarde:
-        return 'Lanche da Tarde';
+        return l10n.meal_type_lanche_da_tarde;
       case TipoRefeicao.preTreino:
-        return 'Pré-Treino';
+        return l10n.meal_type_pre_treino;
       case TipoRefeicao.posTreino:
-        return 'Pós-Treino';
+        return l10n.meal_type_pos_treino;
       case TipoRefeicao.jantar:
-        return 'Jantar';
+        return l10n.meal_type_jantar;
       case TipoRefeicao.ceia:
-        return 'Ceia';
+        return l10n.meal_type_ceia;
     }
   }
 
@@ -154,31 +162,33 @@ extension TipoRefeicaoExtension on TipoRefeicao {
 // =======================================================================
 // Tipos de Usuário
 extension TipoUsuarioExtension on TipoUsuario {
-  String get displayName {
+  String displayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case TipoUsuario.aluno:
-        return 'Aluno';
+        return l10n.user_type_aluno;
       case TipoUsuario.trainer:
-        return 'Personal Trainer'; // Nome mais claro para a UI
+        return l10n.user_type_trainer;
       case TipoUsuario.nutricionista:
-        return 'Nutricionista';
+        return l10n.user_type_nutricionista;
     }
   }
 }
 
 extension NivelEsforcoExtension on NivelEsforco {
-  String get displayName {
+  String displayName(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     switch (this) {
       case NivelEsforco.muitoLeve:
-        return 'Muito Leve';
+        return l10n.effort_level_muito_leve;
       case NivelEsforco.leve:
-        return 'Leve';
+        return l10n.effort_level_leve;
       case NivelEsforco.moderado:
-        return 'Moderado';
+        return l10n.effort_level_moderado;
       case NivelEsforco.dificil:
-        return 'Difícil';
+        return l10n.effort_level_dificil;
       case NivelEsforco.maximo:
-        return 'Máximo Esforço';
+        return l10n.effort_level_maximo;
     }
   }
 
@@ -194,6 +204,36 @@ extension NivelEsforcoExtension on NivelEsforco {
         return Icons.sentiment_dissatisfied_rounded;
       case NivelEsforco.maximo:
         return Icons.sentiment_very_dissatisfied_rounded;
+    }
+  }
+
+  Color get color {
+    switch (this) {
+      case NivelEsforco.muitoLeve:
+        return Colors.lightBlue.shade400;
+      case NivelEsforco.leve:
+        return Colors.green.shade500;
+      case NivelEsforco.moderado:
+        return Colors.yellow.shade700;
+      case NivelEsforco.dificil:
+        return Colors.orange.shade600;
+      case NivelEsforco.maximo:
+        return Colors.red.shade700;
+    }
+  }
+
+  int get rpeValue {
+    switch (this) {
+      case NivelEsforco.muitoLeve:
+        return 2;
+      case NivelEsforco.leve:
+        return 4;
+      case NivelEsforco.moderado:
+        return 6;
+      case NivelEsforco.dificil:
+        return 8;
+      case NivelEsforco.maximo:
+        return 10;
     }
   }
 }

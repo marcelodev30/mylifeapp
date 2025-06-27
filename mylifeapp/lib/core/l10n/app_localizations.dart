@@ -272,12 +272,6 @@ abstract class AppLocalizations {
   /// **'Enviar Link de Recuperação'**
   String get forgotPasswordSendButton;
 
-  /// No description provided for @genericLoading.
-  ///
-  /// In pt, this message translates to:
-  /// **'Carregando...'**
-  String get genericLoading;
-
   /// No description provided for @genericErrorTitle.
   ///
   /// In pt, this message translates to:
@@ -289,42 +283,6 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Sucesso!'**
   String get genericSuccessTitle;
-
-  /// No description provided for @genericOk.
-  ///
-  /// In pt, this message translates to:
-  /// **'OK'**
-  String get genericOk;
-
-  /// No description provided for @genericCancel.
-  ///
-  /// In pt, this message translates to:
-  /// **'Cancelar'**
-  String get genericCancel;
-
-  /// No description provided for @genericContinue.
-  ///
-  /// In pt, this message translates to:
-  /// **'Continuar'**
-  String get genericContinue;
-
-  /// No description provided for @genericSave.
-  ///
-  /// In pt, this message translates to:
-  /// **'Salvar'**
-  String get genericSave;
-
-  /// No description provided for @genericNext.
-  ///
-  /// In pt, this message translates to:
-  /// **'Próximo'**
-  String get genericNext;
-
-  /// No description provided for @genericBack.
-  ///
-  /// In pt, this message translates to:
-  /// **'Voltar'**
-  String get genericBack;
 
   /// No description provided for @validationEmailInvalid.
   ///
@@ -392,11 +350,377 @@ abstract class AppLocalizations {
   /// **'E aí, {userName}'**
   String hellouser(String userName);
 
+  /// No description provided for @settingsScreenTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Configurações'**
+  String get settingsScreenTitle;
+
+  /// No description provided for @profileScreenTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Meu Perfil'**
+  String get profileScreenTitle;
+
+  /// No description provided for @workoutsScreenTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Meus Treinos'**
+  String get workoutsScreenTitle;
+
+  /// No description provided for @homeScreenTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Início'**
+  String get homeScreenTitle;
+
+  /// No description provided for @dataStateLoading.
+  ///
+  /// In pt, this message translates to:
+  /// **'Carregando...'**
+  String get dataStateLoading;
+
+  /// No description provided for @save.
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar'**
+  String get save;
+
+  /// No description provided for @cancel.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get cancel;
+
+  /// No description provided for @edit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar'**
+  String get edit;
+
+  /// No description provided for @delete.
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir'**
+  String get delete;
+
+  /// No description provided for @add.
+  ///
+  /// In pt, this message translates to:
+  /// **'Adicionar'**
+  String get add;
+
+  /// No description provided for @next.
+  ///
+  /// In pt, this message translates to:
+  /// **'Próximo'**
+  String get next;
+
+  /// No description provided for @back.
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar'**
+  String get back;
+
+  /// No description provided for @continueAction.
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get continueAction;
+
+  /// No description provided for @close.
+  ///
+  /// In pt, this message translates to:
+  /// **'Fechar'**
+  String get close;
+
+  /// No description provided for @search.
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar'**
+  String get search;
+
+  /// No description provided for @filter.
+  ///
+  /// In pt, this message translates to:
+  /// **'Filtrar'**
+  String get filter;
+
+  /// No description provided for @apply.
+  ///
+  /// In pt, this message translates to:
+  /// **'Aplicar'**
+  String get apply;
+
+  /// No description provided for @confirm.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirmar'**
+  String get confirm;
+
+  /// No description provided for @yes.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sim'**
+  String get yes;
+
+  /// No description provided for @no.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não'**
+  String get no;
+
+  /// No description provided for @ok.
+  ///
+  /// In pt, this message translates to:
+  /// **'OK'**
+  String get ok;
+
+  /// No description provided for @dataStateNoData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum dado encontrado.'**
+  String get dataStateNoData;
+
+  /// No description provided for @dataStateError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar os dados. Tente novamente.'**
+  String get dataStateError;
+
   /// No description provided for @phraseAppBar.
   ///
   /// In pt, this message translates to:
   /// **'Bora conferir o {phrase} de hoje?'**
   String phraseAppBar(String phrase);
+
+  /// No description provided for @status_pendente.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pendente'**
+  String get status_pendente;
+
+  /// No description provided for @status_processando.
+  ///
+  /// In pt, this message translates to:
+  /// **'Processando'**
+  String get status_processando;
+
+  /// No description provided for @status_concluido.
+  ///
+  /// In pt, this message translates to:
+  /// **'Concluído'**
+  String get status_concluido;
+
+  /// No description provided for @status_falhou.
+  ///
+  /// In pt, this message translates to:
+  /// **'Falhou'**
+  String get status_falhou;
+
+  /// No description provided for @user_type_aluno.
+  ///
+  /// In pt, this message translates to:
+  /// **'Aluno'**
+  String get user_type_aluno;
+
+  /// No description provided for @user_type_trainer.
+  ///
+  /// In pt, this message translates to:
+  /// **'Personal Trainer'**
+  String get user_type_trainer;
+
+  /// No description provided for @user_type_nutricionista.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nutricionista'**
+  String get user_type_nutricionista;
+
+  /// No description provided for @series_type_aquecimento.
+  ///
+  /// In pt, this message translates to:
+  /// **'Aquecimento'**
+  String get series_type_aquecimento;
+
+  /// No description provided for @series_type_preparacao.
+  ///
+  /// In pt, this message translates to:
+  /// **'Série de Preparação'**
+  String get series_type_preparacao;
+
+  /// No description provided for @series_type_reconhecimento.
+  ///
+  /// In pt, this message translates to:
+  /// **'Reconhecimento de Carga'**
+  String get series_type_reconhecimento;
+
+  /// No description provided for @series_type_trabalho.
+  ///
+  /// In pt, this message translates to:
+  /// **'Série de Trabalho'**
+  String get series_type_trabalho;
+
+  /// No description provided for @week_day_segunda_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Segunda-feira'**
+  String get week_day_segunda_long;
+
+  /// No description provided for @week_day_terca_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Terça-feira'**
+  String get week_day_terca_long;
+
+  /// No description provided for @week_day_quarta_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Quarta-feira'**
+  String get week_day_quarta_long;
+
+  /// No description provided for @week_day_quinta_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Quinta-feira'**
+  String get week_day_quinta_long;
+
+  /// No description provided for @week_day_sexta_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sexta-feira'**
+  String get week_day_sexta_long;
+
+  /// No description provided for @week_day_sabado_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sábado'**
+  String get week_day_sabado_long;
+
+  /// No description provided for @week_day_domingo_long.
+  ///
+  /// In pt, this message translates to:
+  /// **'Domingo'**
+  String get week_day_domingo_long;
+
+  /// No description provided for @week_day_segunda_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'SEG'**
+  String get week_day_segunda_short;
+
+  /// No description provided for @week_day_terca_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'TER'**
+  String get week_day_terca_short;
+
+  /// No description provided for @week_day_quarta_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'QUA'**
+  String get week_day_quarta_short;
+
+  /// No description provided for @week_day_quinta_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'QUI'**
+  String get week_day_quinta_short;
+
+  /// No description provided for @week_day_sexta_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'SEX'**
+  String get week_day_sexta_short;
+
+  /// No description provided for @week_day_sabado_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'SÁB'**
+  String get week_day_sabado_short;
+
+  /// No description provided for @week_day_domingo_short.
+  ///
+  /// In pt, this message translates to:
+  /// **'DOM'**
+  String get week_day_domingo_short;
+
+  /// No description provided for @effort_level_muito_leve.
+  ///
+  /// In pt, this message translates to:
+  /// **'Muito Leve'**
+  String get effort_level_muito_leve;
+
+  /// No description provided for @effort_level_leve.
+  ///
+  /// In pt, this message translates to:
+  /// **'Leve'**
+  String get effort_level_leve;
+
+  /// No description provided for @effort_level_moderado.
+  ///
+  /// In pt, this message translates to:
+  /// **'Moderado'**
+  String get effort_level_moderado;
+
+  /// No description provided for @effort_level_dificil.
+  ///
+  /// In pt, this message translates to:
+  /// **'Difícil'**
+  String get effort_level_dificil;
+
+  /// No description provided for @effort_level_maximo.
+  ///
+  /// In pt, this message translates to:
+  /// **'Máximo Esforço'**
+  String get effort_level_maximo;
+
+  /// No description provided for @meal_type_cafe_da_manha.
+  ///
+  /// In pt, this message translates to:
+  /// **'Café da Manhã'**
+  String get meal_type_cafe_da_manha;
+
+  /// No description provided for @meal_type_lanche_da_manha.
+  ///
+  /// In pt, this message translates to:
+  /// **'Lanche da Manhã'**
+  String get meal_type_lanche_da_manha;
+
+  /// No description provided for @meal_type_almoco.
+  ///
+  /// In pt, this message translates to:
+  /// **'Almoço'**
+  String get meal_type_almoco;
+
+  /// No description provided for @meal_type_lanche_da_tarde.
+  ///
+  /// In pt, this message translates to:
+  /// **'Lanche da Tarde'**
+  String get meal_type_lanche_da_tarde;
+
+  /// No description provided for @meal_type_pre_treino.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pré-Treino'**
+  String get meal_type_pre_treino;
+
+  /// No description provided for @meal_type_pos_treino.
+  ///
+  /// In pt, this message translates to:
+  /// **'Pós-Treino'**
+  String get meal_type_pos_treino;
+
+  /// No description provided for @meal_type_jantar.
+  ///
+  /// In pt, this message translates to:
+  /// **'Jantar'**
+  String get meal_type_jantar;
+
+  /// No description provided for @meal_type_ceia.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ceia'**
+  String get meal_type_ceia;
 }
 
 class _AppLocalizationsDelegate
