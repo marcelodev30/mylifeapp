@@ -13,7 +13,7 @@ class FotoProgressoModel {
     this.descricao,
     DateTime? create,
     String? id,
-  }) : id = Uuid().v4(),
+  }) : id = id ?? Uuid().v4(),
        create = create ?? DateTime.now();
 
   factory FotoProgressoModel.fromJson(Map<String, dynamic> json) {

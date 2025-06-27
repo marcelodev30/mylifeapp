@@ -12,8 +12,8 @@ class TreinoDoDia {
     required this.exercicios,
     String? id,
     DateTime? createDataTime,
-  }) : id = Uuid().v4(),
-       createDataTime = DateTime.now();
+  }) : id = id ?? Uuid().v4(),
+       createDataTime = createDataTime ?? DateTime.now();
 
   factory TreinoDoDia.fromJson(Map<String, dynamic> json) {
     return TreinoDoDia(
@@ -21,10 +21,10 @@ class TreinoDoDia {
       name: json['nome'] as String,
       createDataTime: DateTime.parse(json['createDataTime'] as String),
       exercicios:
-          (json['serexerciciosies'] as List<dynamic>)
+          (json['exercicios'] as List<dynamic>)
               .map(
-                (xercicioJson) => ExercicioTreinoModels.fromJson(
-                  xercicioJson as Map<String, dynamic>,
+                (exercicioJson) => ExercicioTreinoModels.fromJson(
+                  exercicioJson as Map<String, dynamic>,
                 ),
               )
               .toList(),
@@ -36,7 +36,7 @@ class TreinoDoDia {
       'id': id,
       'name': name,
       'createDataTime': createDataTime.toIso8601String(),
-      'series': exercicios.map((serie) => serie.toJson()).toList(),
+      'exercicios': exercicios.map((exercicio) => exercicio.toJson()).toList(),
     };
   }
 

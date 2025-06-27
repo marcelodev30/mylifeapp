@@ -13,15 +13,13 @@ class ExercicioTreinoModels {
     required this.series,
     this.percepcaoRPE,
     String? id,
-    DateTime? createDataTime,
-  }) : id = Uuid().v4();
+  }) : id = id ?? Uuid().v4();
 
   factory ExercicioTreinoModels.fromJson(Map<String, dynamic> json) {
     return ExercicioTreinoModels(
       id: json['id'] as String?,
       nome: json['nome'] as String,
       percepcaoRPE: json['percepcaoRPE'] as int?,
-      createDataTime: DateTime.parse(json['createDataTime'] as String),
       series:
           (json['series'] as List<dynamic>)
               .map(

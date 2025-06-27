@@ -7,6 +7,8 @@ enum Controle { leve, bom }
 
 enum TipoUsuario { aluno, trainer, nutricionista }
 
+enum TipoSerie { aquecimento, preparacao, reconhecimento, serieDeTrabalho }
+
 enum DiaDaSemana { segunda, terca, quarta, quinta, sexta, sabado, domingo }
 
 enum NivelEsforco { muitoLeve, leve, moderado, dificil, maximo }
@@ -20,6 +22,47 @@ enum TipoRefeicao {
   posTreino,
   jantar,
   ceia,
+}
+
+extension TipoSerieExtension on TipoSerie {
+  String get displayName {
+    switch (this) {
+      case TipoSerie.aquecimento:
+        return 'Aquecimento';
+      case TipoSerie.preparacao:
+        return 'Série de Preparação';
+      case TipoSerie.reconhecimento:
+        return 'Reconhecimento de Carga';
+      case TipoSerie.serieDeTrabalho:
+        return 'Série de Trabalho';
+    }
+  }
+
+  dynamic get icon {
+    switch (this) {
+      case TipoSerie.aquecimento:
+        return AppIcons.heating;
+      case TipoSerie.preparacao:
+        return AppIcons.preparation;
+      case TipoSerie.reconhecimento:
+        return AppIcons.recognition;
+      case TipoSerie.serieDeTrabalho:
+        return AppIcons.workSeries;
+    }
+  }
+
+  Color get color {
+    switch (this) {
+      case TipoSerie.aquecimento:
+        return Colors.orange.shade600;
+      case TipoSerie.preparacao:
+        return Colors.teal.shade500;
+      case TipoSerie.reconhecimento:
+        return Colors.purple.shade500;
+      case TipoSerie.serieDeTrabalho:
+        return Colors.blue.shade700;
+    }
+  }
 }
 
 // =======================================================================

@@ -16,5 +16,10 @@ class AppIcons {
   static IconData get dinner => Icons.dinner_dining_rounded;
   static IconData get supper => Icons.nightlight_round;
 
+  static IconData get heating => Icons.local_fire_department_rounded;
+  static IconData get preparation => Icons.trending_up_rounded;
+  static IconData get recognition => Icons.visibility_rounded;
+  static IconData get workSeries => Icons.task_alt_rounded;
+
   static String get googleIcon => 'assets/icon/iconGoogle.svg';
 }

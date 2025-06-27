@@ -23,7 +23,7 @@ class SerieTreinoModel {
     this.velocidadeExecucao,
     this.intervaloSeries,
     String? id,
-  }) : id = Uuid().v4();
+  }) : id = id ?? Uuid().v4();
 
   factory SerieTreinoModel.fromJson(Map<String, dynamic> map) {
     return SerieTreinoModel(
@@ -34,7 +34,7 @@ class SerieTreinoModel {
       velocidadeExecucao: map['velocidadeExecucao'] as String?,
       reps: map['reps'] as int,
       carga: (map['carga'] as num).toDouble(),
-      intervaloSeries: (map['intervaloSeries'] as num).toDouble(),
+      intervaloSeries: (map['intervaloSeries'] as num?)?.toDouble(),
       falha: map['falha'] as bool,
       ajuda: map['ajuda'] as int?,
     );

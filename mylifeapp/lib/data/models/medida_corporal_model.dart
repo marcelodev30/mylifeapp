@@ -35,7 +35,7 @@ class MedidaCorporalModel {
     this.panturrilha,
     DateTime? create,
     String? id,
-  }) : id = Uuid().v4(),
+  }) : id = id ?? const Uuid().v4(),
        create = create ?? DateTime.now();
 
   factory MedidaCorporalModel.fromJson(Map<String, dynamic> json) {
