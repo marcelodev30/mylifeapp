@@ -4,8 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:mylifeapp/core/config/constants/string_config.dart';
 import 'package:mylifeapp/core/config/gorouter_config.dart';
 import 'package:mylifeapp/core/interfaces/auth_repository_interface.dart';
-import 'package:mylifeapp/core/l10n/app_localizations.dart';
-import 'package:mylifeapp/data/services/auth_service.dart';
+import 'package:mylifeapp/core/locale/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/data/repository/auth_repository.dart';
 
@@ -17,8 +16,6 @@ void setupInjector() {
   getIt.registerLazySingleton<AuthRepository>(
     () => AuthRepositoryFirebase(getIt<FirebaseAuth>()),
   );
-
-  getIt.registerSingleton<AuthService>(AuthService(getIt<AuthRepository>()));
 
   getIt.registerFactory<AuthController>(
     () => AuthController(getIt<AuthRepository>()),

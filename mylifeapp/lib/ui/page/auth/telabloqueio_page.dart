@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
 import 'package:mylifeapp/ui/components/profile_avatar_components.dart';
-import 'package:mylifeapp/ui/page/auth/layout_base.dart';
+import 'package:mylifeapp/ui/page/auth/layout_base_page.dart';
 
 class ScreenLockPage extends StatefulWidget {
   const ScreenLockPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/colors_config.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
-import 'package:mylifeapp/core/l10n/app_localizations.dart';
+import 'package:mylifeapp/core/locale/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import '../../core/config/constants/image_config.dart';
 import '../../core/theme/textstyles_config.dart';

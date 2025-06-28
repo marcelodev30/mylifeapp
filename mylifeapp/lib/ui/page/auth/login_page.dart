@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:mylifeapp/core/config/constants/icons_config.dart';
 import 'package:mylifeapp/core/config/constants/image_config.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
-import 'package:mylifeapp/core/l10n/app_localizations.dart';
+import 'package:mylifeapp/core/locale/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/ui/page/auth/components/appbutton_compnent.dart';
 import 'package:mylifeapp/ui/page/auth/components/apptitletext_component.dart';
@@ -28,8 +28,8 @@ class _LoginPageState extends State<LoginPage> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     _authControlle.addListener(() {
-      if (_authControlle.erro != null) {
-        debugPrint(_authControlle.erro);
+      if (_authControlle.error != null) {
+        debugPrint(_authControlle.error);
       }
     });
   }

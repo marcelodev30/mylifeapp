@@ -1,18 +1,18 @@
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
-import 'package:mylifeapp/data/services/auth_service.dart';
+import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/ui/page/auth/login_page.dart';
 import 'package:mylifeapp/ui/page/auth/telabloqueio_page.dart';
-import 'package:mylifeapp/ui/page/home/home_page.dart';
+import 'package:mylifeapp/ui/page/home/home_base_base.dart';
 import 'constants/gorouter_path_config.dart';
 
 class AppRouter {
   static final navigatorKey = GlobalKey<NavigatorState>();
-  static final _authService = getIt<AuthService>();
+  static final _authController = getIt<AuthController>();
   static final GoRouter route = GoRouter(
     navigatorKey: navigatorKey,
-    refreshListenable: _authService,
+    refreshListenable: _authController,
     initialLocation: AppRouterPath.login,
     routes: [
       GoRoute(
@@ -21,7 +21,7 @@ class AppRouter {
       ),
       GoRoute(
         path: AppRouterPath.home,
-        builder: (context, state) => HomePage(),
+        builder: (context, state) => HomeBasePage(),
       ),
       GoRoute(
         path: AppRouterPath.lock,
@@ -29,7 +29,7 @@ class AppRouter {
       ),
     ],
     redirect: (BuildContext context, GoRouterState state) {
-      final bool isLoggedIn = _authService.isLoggedIn;
+      final bool isLoggedIn = _authController.isLoggedIn;
       final location = state.matchedLocation;
       final isLoggingIn = location == AppRouterPath.login;
 

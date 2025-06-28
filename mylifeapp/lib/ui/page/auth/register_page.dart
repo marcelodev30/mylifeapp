@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mylifeapp/core/config/constants/constants_config.dart';
-import 'package:mylifeapp/core/l10n/app_localizations.dart';
-import 'package:mylifeapp/ui/page/auth/layout_base.dart';
+import 'package:mylifeapp/core/locale/app_localizations.dart';
+import 'package:mylifeapp/ui/page/auth/layout_base_page.dart';
 
 import 'components/texttitle_components.dart';
 

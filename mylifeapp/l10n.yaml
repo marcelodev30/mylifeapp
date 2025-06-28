@@ -1,5 +1,5 @@
 # informa ao Flutter que os arquivos .arb estão em 'lib/core/l10n'
-arb-dir: lib/core/l10n 
+arb-dir: lib/core/locale 
 
 # define o arquivo que servirá de modelo para as traduções
 template-arb-file: app_pt.arb 
