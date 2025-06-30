@@ -40,17 +40,20 @@ class _HomeBasePageState extends State<HomeBasePage> {
           SalomonBottomBarItem(
             icon: Icon(AppIcons.home),
             title: Text(AppLocalizations.of(context)!.homeScreenTitle),
-            selectedColor: Colors.white,
+            selectedColor:
+                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
           ),
           SalomonBottomBarItem(
             icon: Icon(AppIcons.fitness),
             title: Text('Treinos'),
-            selectedColor: Colors.white,
+            selectedColor:
+                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
           ),
           SalomonBottomBarItem(
             icon: Icon(AppIcons.profile),
             title: Text(AppLocalizations.of(context)!.settingsScreenTitle),
-            selectedColor: Colors.white,
+            selectedColor:
+                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
           ),
         ],
       ),

@@ -20,7 +20,7 @@ class ItemCardSettings extends StatelessWidget {
       margin: const EdgeInsets.only(right: 8, bottom: 16, left: 8),
       child: ListTile(
         onTap: onTap,
-        leading: Icon(icon, size: 20, color: Colors.black),
+        leading: Icon(icon, size: 20),
         title: Text(title, style: Theme.of(context).textTheme.bodyLarge),
         trailing:
             trailing ??

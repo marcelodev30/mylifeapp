@@ -3,11 +3,63 @@ import 'package:mylifeapp/core/config/constants/colors_config.dart';
 import '../config/constants/constants_config.dart';
 
 class AppThemeData {
-  static ThemeData get dark => ThemeData.dark().copyWith(
+  static ThemeData get dark => _base.copyWith(
     scaffoldBackgroundColor: AppColors.black,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: Colors.white,
+    ),
+    inputDecorationTheme: _base.inputDecorationTheme.copyWith(
+      prefixIconColor: AppColors.white,
+      suffixIconColor: AppColors.white,
+      labelStyle: _base.inputDecorationTheme.labelStyle?.copyWith(
+        color: Colors.white,
+      ),
+      hintStyle: _base.inputDecorationTheme.hintStyle?.copyWith(
+        color: Colors.white,
+      ),
+    ),
+    cardTheme: _base.cardTheme.copyWith(color: AppColors.white),
+    textTheme: _base.textTheme.copyWith(
+      titleSmall: _base.textTheme.titleSmall?.copyWith(color: AppColors.white),
+      labelMedium: _base.textTheme.labelMedium?.copyWith(
+        color: AppColors.white,
+      ),
+      bodyMedium: _base.textTheme.bodyMedium?.copyWith(color: AppColors.white),
+      headlineSmall: _base.textTheme.headlineSmall?.copyWith(
+        color: AppColors.white,
+        decorationColor: AppColors.white,
+      ),
+    ),
+  );
+  static ThemeData get light => _base.copyWith(
+    scaffoldBackgroundColor: AppColors.white,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: Colors.black,
+    ),
+    iconTheme: IconThemeData(color: Colors.black),
+    inputDecorationTheme: _base.inputDecorationTheme.copyWith(
+      prefixIconColor: AppColors.black,
+      suffixIconColor: AppColors.blue,
+      labelStyle: _base.inputDecorationTheme.labelStyle?.copyWith(
+        color: Colors.black,
+      ),
+      hintStyle: _base.inputDecorationTheme.hintStyle?.copyWith(
+        color: Colors.black,
+      ),
+    ),
 
+    textTheme: _base.textTheme.copyWith(
+      titleSmall: _base.textTheme.titleSmall?.copyWith(color: Colors.black),
+      labelMedium: _base.textTheme.labelMedium?.copyWith(color: Colors.black),
+      bodyMedium: _base.textTheme.bodyMedium?.copyWith(color: Colors.black),
+      headlineSmall: _base.textTheme.headlineSmall?.copyWith(
+        color: Colors.black,
+        decorationColor: Colors.black,
+      ),
+    ),
+  );
+  static ThemeData get _base => ThemeData.dark().copyWith(
     cardTheme: CardThemeData(
-      color: AppColors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(16),
       ),
@@ -24,20 +76,8 @@ class AppThemeData {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      prefixIconColor: AppColors.white,
-      suffixIconColor: AppColors.white,
-      filled: true,
-      fillColor: Colors.transparent,
-      labelStyle: TextStyle(
-        color: AppColors.white,
-        fontSize: 16,
-        fontWeight: FontWeight.w600,
-      ),
-      hintStyle: TextStyle(
-        color: AppColors.white,
-        fontSize: 14,
-        fontWeight: FontWeight.w600,
-      ),
+      labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+      hintStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
 
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(AppConstants.borderRadius),
@@ -74,7 +114,21 @@ class AppThemeData {
       ),
     ),
     textTheme: TextTheme(
-      titleLarge: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+      titleLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+      titleMedium: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      titleSmall: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+
+      labelLarge: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+      labelMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+
+      headlineSmall: TextStyle(
+        decoration: TextDecoration.underline,
+        fontSize: 16,
+        fontWeight: FontWeight.w700,
+      ),
+
+      bodyMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+
       bodyLarge: TextStyle(
         color: AppColors.black,
         fontSize: 18,

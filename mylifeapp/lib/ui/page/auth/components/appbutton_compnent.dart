@@ -20,7 +20,10 @@ class AppButtonAuth extends StatelessWidget {
         onPressed: onPressed,
         style: ButtonStyle(
           shape: WidgetStatePropertyAll(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            RoundedRectangleBorder(
+              side: BorderSide(color: Colors.black, width: 2),
+              borderRadius: BorderRadius.circular(8),
+            ),
           ),
           backgroundColor: WidgetStatePropertyAll(color),
         ),

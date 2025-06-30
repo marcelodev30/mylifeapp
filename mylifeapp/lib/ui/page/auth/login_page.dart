@@ -51,8 +51,8 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 8 * 12),
-              Image.asset(AppImages.imgLogoV1, height: 8 * 17),
+              SizedBox(height: 8 * 16),
+              //Image.asset(AppImages.imgLogoV1, height: 8 * 17),
               TitleApp(),
               SizedBox(height: 8),
               Form(
@@ -64,11 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       AppLocalizations.of(context)!.loginSubtitle,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.white.withValues(alpha: 0.7),
-                      ),
+                      style: Theme.of(context).textTheme.titleSmall,
                     ),
                     SizedBox(height: 16),
                     TextFormField(
@@ -93,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                           onPressed: () {},
                           child: Text(
                             AppLocalizations.of(context)!.forgotPasswordTitle,
-                            style: AppTextStyles.text16W700Subindo,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                         ),
                       ],
@@ -119,11 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                     //Divider(color: Colors.white, height: 24),
                     Text(
                       AppLocalizations.of(context)!.loginOrConnectWith,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                        color: AppColors.white,
-                      ),
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     SizedBox(height: 4),
                     AppButtonAuth(
@@ -151,18 +143,14 @@ class _LoginPageState extends State<LoginPage> {
                       children: [
                         Text(
                           AppLocalizations.of(context)!.loginNoAccountPrompt,
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.white,
-                          ),
+                          style: Theme.of(context).textTheme.labelMedium,
                         ),
                         TextButton(
                           child: Text(
                             AppLocalizations.of(
                               context,
                             )!.loginCreateAccountButton,
-                            style: AppTextStyles.text16W700Subindo,
+                            style: Theme.of(context).textTheme.headlineSmall,
                           ),
                           onPressed: () {},
                         ),
