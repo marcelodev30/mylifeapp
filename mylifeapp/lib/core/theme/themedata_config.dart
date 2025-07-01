@@ -25,7 +25,7 @@ class AppThemeData {
     );
   }
 
-  // ============= TEMA ESCURO ===========================================
+  // ============= TEMA Dark ===========================================
   static ThemeData get dark {
     final theme = ThemeData.dark();
 
@@ -39,7 +39,6 @@ class AppThemeData {
         error: Colors.redAccent.shade100,
         onError: AppColors.black,
       ),
-      // Aplica as customizações de widgets
       cardTheme: _cardTheme,
       textButtonTheme: _textButtonTheme,
       inputDecorationTheme: _inputDecorationTheme(theme.colorScheme),

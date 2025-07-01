@@ -22,7 +22,7 @@ class TextFormSenha extends StatefulWidget {
 }
 
 class _TextFormSenhaState extends State<TextFormSenha> {
-  bool obscureText = false;
+  bool obscureText = true;
 
   @override
   Widget build(BuildContext context) {

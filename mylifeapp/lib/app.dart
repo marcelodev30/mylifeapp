@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: AppStrings.titleApp,
       theme: AppThemeData.light,
       darkTheme: AppThemeData.dark,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       routerConfig: AppRouter.route,
       locale: Locale('pt'),
       localizationsDelegates: AppLocale.localizationsDelegates,
