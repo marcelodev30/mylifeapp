@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mylifeapp/core/config/constants/icons_config.dart';
-import 'package:mylifeapp/core/config/constants/image_config.dart';
 import 'package:mylifeapp/core/config/injector_config.dart';
 import 'package:mylifeapp/core/locale/app_localizations.dart';
 import 'package:mylifeapp/ui/controllers/auth_controller.dart';
 import 'package:mylifeapp/ui/page/auth/components/appbutton_compnent.dart';
 import 'package:mylifeapp/ui/page/auth/components/apptitletext_component.dart';
 import '../../../core/config/constants/colors_config.dart';
-import '../../../core/theme/textstyles_config.dart';
 import 'components/textform_components.dart';
 
 class LoginPage extends StatefulWidget {
@@ -70,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                     TextFormField(
                       controller: _email,
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(fontSize: 16),
                       decoration: InputDecoration(
                         hintText: AppLocalizations.of(context)!.loginEmailHint,
                         label: Text(

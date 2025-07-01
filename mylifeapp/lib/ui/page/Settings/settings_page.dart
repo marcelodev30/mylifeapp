@@ -17,13 +17,25 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ProfileHeader(),
-        SizedBox(height: 20),
-        ItemCardSettings(title: 'Aparência', icon: Icons.light, onTap: () {}),
-        ItemCardSettings(
-          title: 'Sai',
-          icon: Icons.exit_to_app,
-          onTap: () => _authControlle.logout(),
+        AppBar(title: Text('Settings')),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              ProfileHeader(),
+              SizedBox(height: 20),
+              ItemCardSettings(
+                title: 'Aparência',
+                icon: Icons.light,
+                onTap: () {},
+              ),
+              ItemCardSettings(
+                title: 'Sai',
+                icon: Icons.exit_to_app,
+                onTap: () => _authControlle.logout(),
+              ),
+            ],
+          ),
         ),
       ],
     );

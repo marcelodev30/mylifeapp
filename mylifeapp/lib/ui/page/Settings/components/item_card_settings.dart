@@ -22,9 +22,7 @@ class ItemCardSettings extends StatelessWidget {
         onTap: onTap,
         leading: Icon(icon, size: 20),
         title: Text(title, style: Theme.of(context).textTheme.bodyLarge),
-        trailing:
-            trailing ??
-            Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
+        trailing: trailing ?? Icon(Icons.arrow_forward_ios, size: 20),
         contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
       ),
     );

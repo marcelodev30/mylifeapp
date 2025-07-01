@@ -21,13 +21,9 @@ class _HomeBasePageState extends State<HomeBasePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(), //MyAppBar(name: 'Marcelo Alves'),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-          child: _pages[idex],
-        ),
-      ),
+      //appBar: AppBar(),
+      //appBar: MyAppBar(name: 'Marcelo Alves'),
+      body: _pages[idex],
       bottomNavigationBar: SalomonBottomBar(
         margin: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
         currentIndex: idex,
@@ -40,20 +36,17 @@ class _HomeBasePageState extends State<HomeBasePage> {
           SalomonBottomBarItem(
             icon: Icon(AppIcons.home),
             title: Text(AppLocalizations.of(context)!.homeScreenTitle),
-            selectedColor:
-                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+            selectedColor: Theme.of(context).colorScheme.onSurface,
           ),
           SalomonBottomBarItem(
             icon: Icon(AppIcons.fitness),
             title: Text('Treinos'),
-            selectedColor:
-                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+            selectedColor: Theme.of(context).colorScheme.onSurface,
           ),
           SalomonBottomBarItem(
             icon: Icon(AppIcons.profile),
             title: Text(AppLocalizations.of(context)!.settingsScreenTitle),
-            selectedColor:
-                Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
+            selectedColor: Theme.of(context).colorScheme.onSurface,
           ),
         ],
       ),
