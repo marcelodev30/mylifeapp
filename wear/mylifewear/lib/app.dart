@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mylifewear/ui/page/homepage.dart';
+import 'package:mylifewear/ui/page/treno_page.dart';
 
 import 'core/config/themedata_config.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppThemeData.dark,
-      home: HomePage(),
+      home: SmartwatchGifPage(),
     );
   }
 }

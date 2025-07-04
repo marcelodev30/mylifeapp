@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
             colors: [Colors.grey[900]!, Colors.black],
           ),
         ),
-        
+
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -28,11 +28,12 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                SizedBox(height: 15),
                 Image.asset(
-                  'assets/img/press_de_banco.png',
-                  width: 80,
-                  
-                  color: Colors.white,
+                  'assets/img/supino_banco.gif',
+                  width: 160,
+
+                  gaplessPlayback: true,
                 ),
                 const SizedBox(height: 8),
                 const Text(
