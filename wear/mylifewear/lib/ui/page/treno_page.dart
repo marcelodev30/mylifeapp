@@ -5,7 +5,7 @@ class SmartwatchGifPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double size = MediaQuery.of(context).size.shortestSide * 0.85;
+    final double size = MediaQuery.of(context).size.shortestSide * 0.89;
 
     return Scaffold(
       backgroundColor: Colors.black,
@@ -29,7 +29,7 @@ class SmartwatchGifPage extends StatelessWidget {
                   height: size,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.blue,
+
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black54,
@@ -41,7 +41,7 @@ class SmartwatchGifPage extends StatelessWidget {
                   child: ClipOval(
                     child: Center(
                       child: AspectRatio(
-                        aspectRatio: 16 / 9, // Formato retangular do GIF
+                        aspectRatio: 16 / 9,
                         child: Image.asset(
                           'assets/img/supino_banco.gif',
                           fit: BoxFit.cover,
