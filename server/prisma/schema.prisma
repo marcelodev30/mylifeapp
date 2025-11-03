@@ -1,0 +1,230 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Para o extrato (Transacao)
+enum TipoTransacao {
+  RECEITA
+  DESPESA
+}
+
+// Para Contas
+enum TipoConta {
+  CONTA_CORRENTE // Para Pix, Débito
+  CARTAO_CREDITO
+  DINHEIRO // Para dinheiro em espécie
+}
+
+// Para classificar Categorias
+enum TipoDespesa {
+  ASSINATURA // Lazer, streaming
+  FIXA // Contas essenciais (água, luz, aluguel)
+  ESSENCIAL // Gastos variáveis essenciais (supermercado, gasolina)
+  VARIAVEL // Gastos não essenciais (lazer, restaurantes)
+}
+
+// Para Tarefas e Lista de Desejos
+enum NivelPrioridade {
+  BAIXA
+  MEDIA
+  ALTA
+}
+
+// Para Tarefas
+enum StatusTarefa {
+  PENDENTE
+  CONCLUIDA
+}
+
+// Para Compra Parcelada (Dívidas)
+enum TipoPagamentoParcelado {
+  CARTAO_PROPRIO // Está em um dos seus cartões cadastrados
+  BOLETO // Dívida externa (carnê, boleto)
+  OUTRO // Ex: Cartão emprestado
+}
+
+// Para Custo Recorrente (Assinaturas, Contas)
+enum TipoPagamentoRecorrente {
+  DEBITO_AUTOMATICO // Ligado a uma CONTA_CORRENTE
+  CARTAO_CREDITO // Ligado a um CARTAO_CREDITO
+  BOLETO // Dívida externa (usuário paga manualmente)
+}
+
+// --- Modelos Principais ---
+
+model Usuario {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  nome     String
+  criadoEm DateTime @default(now())
+
+  // --- Relacionamentos ---
+  contas       Conta[]
+  categorias   Categoria[]
+  orcamentos   Orcamento[]
+  itensDesejos ItemListaDesejos[]
+  tarefas      Tarefa[]
+
+  // Relacionamento direto para receitas e dívidas "externas"
+  transacoes        Transacao[]
+  comprasParceladas CompraParcelada[]
+  custosRecorrentes CustoRecorrente[]
+}
+
+// Modelo para Contas Correntes, Cartões e Dinheiro
+model Conta {
+  id         Int       @id @default(autoincrement())
+  nome       String // Ex: "Itaú", "Nubank", "Carteira"
+  tipo       TipoConta
+  saldoAtual Decimal   @default(0) // Saldo atual da conta
+
+  // Para CARTAO_CREDITO
+  limite        Decimal? // Limite total do cartão
+  diaFechamento Int? // Dia que a fatura fecha (ex: 20)
+  diaVencimento Int? // Dia que a fatura vence (ex: 28)
+
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  // Relacionamentos: O que "sai" ou "passa por" esta conta
+  transacoes        Transacao[] // Extrato (débito, pix, crédito)
+  custosRecorrentes CustoRecorrente[] // Débito automático ou cartão
+  comprasParceladas CompraParcelada[] // Apenas compras em CARTAO_PROPRIO
+}
+
+// Modelo para classificar todas as movimentações
+model Categoria {
+  id          Int           @id @default(autoincrement())
+  nome        String
+  tipo        TipoTransacao // Se é uma categoria de RECEITA ou DESPESA
+  tipoDespesa TipoDespesa? // Sub-tipo (Fixa, Essencial, etc.)
+
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  // Itens que pertencem a esta categoria
+  orcamentos        Orcamento[]
+  transacoes        Transacao[]
+  custosRecorrentes CustoRecorrente[]
+  comprasParceladas CompraParcelada[]
+
+  @@unique([nome, usuarioId])
+}
+
+// Modelo para o Extrato (Registros pontuais de Receita/Despesa)
+model Transacao {
+  id        Int           @id @default(autoincrement())
+  descricao String
+  valor     Decimal
+  tipo      TipoTransacao // RECEITA ou DESPESA
+  data      DateTime      @default(now())
+
+  // Vínculo direto com Usuário (importante para Receitas)
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId Int
+
+  // Vínculo com a Conta (de onde saiu ou para onde foi)
+  conta   Conta @relation(fields: [contaId], references: [id])
+  contaId Int
+}
+
+// Modelo para Contas Fixas/Assinaturas (Netflix, Aluguel, Parcela da Moto)
+model CustoRecorrente {
+  id            Int     @id @default(autoincrement())
+  nome          String
+  valor         Decimal
+  dataRenovacao Int // Dia do vencimento (ex: 10)
+
+  // Como esta conta é paga
+  tipoPagamento TipoPagamentoRecorrente
+
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId Int
+
+  // Vínculo com Usuário (Obrigatório, dono da conta)
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  // Vínculo com Conta (Opcional, só se for CARTAO ou DEBITO_AUTOMATICO)
+  conta   Conta? @relation(fields: [contaId], references: [id])
+  contaId Int?
+}
+
+// Modelo para Compras Parceladas / Dívidas (Mac Mini, Carnê)
+model CompraParcelada {
+  id            Int      @id @default(autoincrement())
+  nome          String // "Mac Mini M4"
+  valorTotal    Decimal // Opcional, mas bom ter
+  valorParcela  Decimal
+  totalParcelas Int
+  parcelasPagas Int      @default(0)
+  dataDaCompra  DateTime @default(now())
+
+  // Como esta dívida é paga
+  tipoPagamento TipoPagamentoParcelado
+
+  // Vencimento do boleto/dívida (Usado se for BOLETO ou OUTRO)
+  diaVencimento Int?
+
+  // Vínculo com Usuário (Obrigatório, dono da dívida)
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  // Vínculo com Categoria (Obrigatório)
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId Int
+
+  // Vínculo com Cartão (Opcional, só se for CARTAO_PROPRIO)
+  conta   Conta? @relation(fields: [contaId], references: [id])
+  contaId Int? // '?' torna o campo opcional
+}
+
+// Modelo para Orçamentos (Limites de gastos por Categoria)
+model Orcamento {
+  id          Int     @id @default(autoincrement())
+  mes         Int // Ex: 10 (para Outubro)
+  ano         Int // Ex: 2025
+  valorLimite Decimal // Valor máximo para este orçamento
+
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+
+  categoria   Categoria @relation(fields: [categoriaId], references: [id])
+  categoriaId Int
+
+  //@@unique([usuarioId, categoryId, mes, ano])
+}
+
+// Modelo para Lista de Desejos
+model ItemListaDesejos {
+  id            Int             @id @default(autoincrement())
+  nome          String
+  prioridade    NivelPrioridade @default(MEDIA)
+  precoEstimado Decimal?
+  url           String?
+
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+}
+
+// Modelo para Gerenciador de Tarefas (To-Do)
+model Tarefa {
+  id             Int             @id @default(autoincrement())
+  titulo         String
+  descricao      String?
+  status         StatusTarefa    @default(PENDENTE)
+  prioridade     NivelPrioridade @default(MEDIA)
+  dataVencimento DateTime? // Prazo final da tarefa
+  criadoEm       DateTime        @default(now())
+
+  usuario   Usuario @relation(fields: [usuarioId], references: [id])
+  usuarioId Int
+}
